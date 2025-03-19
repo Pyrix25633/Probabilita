@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "dc3ac9c70cfb7172",
+        "id": "a36f0e647cbf060f",
         "type": "tabs",
         "children": [
           {
-            "id": "dbe670ec36415c15",
+            "id": "35da8c82be989cd8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calcolo combinatorio.md",
+                "file": "Variabili aleatorie.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Calcolo combinatorio"
+              "title": "Variabili aleatorie"
             }
           }
         ]
@@ -164,11 +164,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dbe670ec36415c15",
+  "active": "35da8c82be989cd8",
   "lastOpenFiles": [
-    "Notazione.md",
-    "Teoremi base.md",
     "Calcolo combinatorio.md",
+    "Teoremi base.md",
+    "Notazione.md",
+    "Variabili aleatorie.md",
     "README.md",
     "LICENSE",
     "Untitled.canvas",
