@@ -70,3 +70,31 @@ Dimostrazione (nel caso continuo):
 $$\begin{flalign}\mathrm{Cov}(X,Y)=\left( \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])f_{X}(x)\,dx \right)\left( \int_{-\infty}^{+\infty} (y-\mathbb{E}[Y])f_{Y}(y)\,dy \right) &&\end{flalign}$$
 $$\begin{flalign}\int_{-\infty}^{+\infty} xf_{X}(x)\,dx-\int_{-\infty}^{+\infty} \mathbb{E}[X]f_{X}(x)\,dx=\mathbb{E}[X]-1\mathbb{E}[X]\cdot1=0 &&\end{flalign}$$
 Analogamente per $y$
+
+# Correlazione
+$X,Y$ variabili aleatorie legate da una relazione lineare $Y=aX+b\;\;a,b\in \mathbb{R}$
+$\mathbb{E}[Y]=a\mathbb{E}[X]+b\implies Y-\mathbb{E}[Y]=a(X-\mathbb{E}[X])$
+$\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=\mathbb{E}[(X-\mathbb{E}[X])a(X-\mathbb{E}[X])]=$$\mathbb{E}[a(X-\mathbb{E}[X])^{2}]=a\mathrm{Var}(X)=\frac{1}{a}\mathrm{Var}(Y)$
+$[\mathrm{Cov}(X,Y)]^{2}=a\mathrm{Var}(X) \frac{1}{a}\mathrm{Var}(Y)=\mathrm{Var}(X)\mathrm{Var}(Y)$
+
+# Coefficiente di correlazione
+E' un indice adimensionale che misura la dipendenza lineare tra $X$ e $Y$
+$$\begin{flalign}\rho=\frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathrm{Var}(X)\mathrm{Var}(Y)}} &&\end{flalign}$$
+$\implies \rho=\pm1$ se $X$ e $Y$ sono perfettamente correlate tra di loro
+$\rho=0$ se $X\perp \!\!\! \perp Y$
+Vale $-1\leq \rho\leq1$:
+- $|\rho|$ vicino a $1$ indica una buona correlazione
+- $|\rho|$ vicino a $0$ indica poca correlazione
+
+Normalmente $Y=aX+b+Z$ dove $Z$ rende incerta la relazione tra $X$ e $Y$
+$Z:\mathbb{E}[Z]=0$ e $\mathrm{Var}(Z)$ è minima
+$\mathbb{E}[Y]=a\mathbb{E}[X]+b+\mathbb{E}[Z]\implies b=\mathbb{E}[Y]-a\mathbb{E}[X]$
+$Z=Y-aX+b\implies \mathrm{Var}(Z)=\mathrm{Var}(Y)+a^{2}\mathrm{Var}(X)-2a\mathrm{Cov}(X,Y)$
+$$\begin{flalign} \frac{d\mathrm{Var}(Z)}{da}=2a\mathrm{Var}(X)-2\mathrm{Cov}(X,Y) &&\end{flalign}$$
+Il minimo corrisponde a $2a\mathrm{Var}(X)-2a\mathrm{Cov}(X,Y)=0\implies$
+$$\begin{flalign}a=\frac{\mathrm{Cov}(X,Y)}{\mathrm{Var}(X)} &&\end{flalign}$$
+$$\begin{flalign}\mathrm{Var}(Z)=\mathrm{Var}(Y)+\frac{[\mathrm{Cov}(X,Y)]^{2}}{[\mathrm{Var}(X)]^{2}}\mathrm{Var}(X)-2 \frac{\mathrm{Cov}(X,Y)}{\mathrm{Var}(X)}\mathrm{Cov}(X,Y)=
+&&\end{flalign}$$
+$$\begin{flalign}=\mathrm{Var}(Y)+\frac{[\mathrm{Cov}(X,Y)]^{2}}{\mathrm{Var}(X)\mathrm{Var}(Y)}\mathrm{Var}(Y)-2 \frac{[\mathrm{Cov}(X,Y)]^{2}}{\mathrm{Var}(X)\mathrm{Var}(Y)}\mathrm{Var}(Y) &&\end{flalign}$$
+$=\mathrm{Var}(Y)(1-\rho^{2}-2\rho^{2})=\mathrm{Var}(Y)(1-\rho^{2})$
+Se $\rho^{2}=1$ la dipendenza lineare è perfetta
