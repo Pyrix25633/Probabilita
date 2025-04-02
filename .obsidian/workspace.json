@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Variabili aleatorie.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -181,7 +181,10 @@
   },
   "active": "32869a2a6dbd60f2",
   "lastOpenFiles": [
+    "pdf/Vettori aleatori.pdf",
     "Variabili aleatorie.md",
+    "pdf/Variabili aleatorie.pdf",
+    "pdf",
     "Vettori aleatori.md",
     "README.md",
     "Calcolo combinatorio.md",
@@ -209,8 +212,6 @@
     "pdf/Integrali.pdf",
     "pdf/Polinomi di Taylor.pdf",
     "pdf/Derivate.pdf",
-    "pdf/Proprietà delle funzioni continue.pdf",
-    "pdf/Limiti.pdf",
     "Trasformazioni di funzioni.md",
     "Pasted image 20241230094656.png",
     "Pasted image 20241230094004.png",
@@ -226,7 +227,6 @@
     "Pasted image 20241213161133.png",
     "Pasted image 20241213161046.png",
     "Pasted image 20241213161022.png",
-    "Sintesi.md",
-    "Welcome.md"
+    "Sintesi.md"
   ]
 }

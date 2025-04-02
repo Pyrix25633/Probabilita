@@ -65,7 +65,13 @@ Non è lineare e $\mathrm{Var}[a+bX]=b^{2}\mathbb{E}[X]$
 
 $\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]-2\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]$ misura la tendenza delle due variabili as assumere valori maggiori o minori della media "insieme"
 
-Se $X\perp \!\!\! \perp Y\implies \mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=0\implies$$\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]$
+# Covarianza
+$$\begin{flalign}\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=\begin{cases}
+\sum_{i}\sum_{j}(x_{i}-\mathbb{E}[X])(y_{i}-\mathbb{E}[Y])P(x_{i},y_{i}) \\
+\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])(y-\mathbb{E}[Y])\,dx\,dy
+\end{cases} &&\end{flalign}$$
+
+Se $X\perp \!\!\! \perp Y\implies \mathrm{Cov}(X,Y)=0\implies$$\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]$
 Dimostrazione (nel caso continuo):
 $$\begin{flalign}\mathrm{Cov}(X,Y)=\left( \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])f_{X}(x)\,dx \right)\left( \int_{-\infty}^{+\infty} (y-\mathbb{E}[Y])f_{Y}(y)\,dy \right) &&\end{flalign}$$
 $$\begin{flalign}\int_{-\infty}^{+\infty} xf_{X}(x)\,dx-\int_{-\infty}^{+\infty} \mathbb{E}[X]f_{X}(x)\,dx=\mathbb{E}[X]-1\mathbb{E}[X]\cdot1=0 &&\end{flalign}$$
