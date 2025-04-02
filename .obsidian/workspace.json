@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vettori aleatori.md",
+                "file": "Variabili aleatorie.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vettori aleatori"
+              "title": "Variabili aleatorie"
             }
           },
           {
@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Variabili aleatorie.md",
+                "file": "Vettori aleatori.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Variabili aleatorie"
+              "title": "Vettori aleatori"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +179,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "35da8c82be989cd8",
+  "active": "32869a2a6dbd60f2",
   "lastOpenFiles": [
     "Variabili aleatorie.md",
     "Vettori aleatori.md",

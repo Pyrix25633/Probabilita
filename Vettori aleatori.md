@@ -20,7 +20,7 @@ $F_{Y}(y)=F(+\infty,y)$
 $$\begin{flalign}f_{X}(x)=\int_{-\infty}^{+\infty} f(x,y)\,dy\\f_{Y}(y)=\int_{-\infty}^{+\infty} f(x,y)\,dx &&\end{flalign}$$
 
 ### Funzioni di massa marginali
-$$\begin{flalign}P_{X}(x)=\sum_{y_{i}}P(x,y_{i})\\P_{Y}(y)=\sum_{x_{i}}P(x_{i},y)   &&\end{flalign}$$
+$$\begin{flalign}P_{X}(x)=\sum_{i}P(x,y_{i})\\P_{Y}(y)=\sum_{i}P(x_{i},y)   &&\end{flalign}$$
 
 # Indipendenza
 $X,Y$ variabili aleatorie, $D_{X},D_{Y}$ sottoinsiemi degli insiemi di definizione di $X,Y\implies X\perp \!\!\! \perp Y$ se $\mathbb{P}((X\in D_{X})\cap(Y\in D_{Y}))=\mathbb{P}(X\in D_{X})\cdot \mathbb{P}(Y\in D_{Y})\;\;\forall D_{X},D_{Y}$

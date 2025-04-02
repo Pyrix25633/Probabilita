@@ -4,7 +4,7 @@ La funzione $X:S\to \mathbb{R}$ è variabile aleatoria $\iff X$ è misurabile in
 Gli elementi misurabili di $S$ sono quelli in $\mathcal{A}$
 
 # Funzione di ripartizione
-Anche chiamata distribuzione cumulativa, fornisce la probabilità dell'evento $(X\in(-\infty,x)\;\;\forall x \in \mathbb{R}$ e si indica con
+Anche chiamata distribuzione cumulativa, fornisce la probabilità dell'evento $(X\in(-\infty,x))\;\;\forall x \in \mathbb{R}$ e si indica con
 $$\begin{flalign}F_{X}(x)=F(x)=\mathbb{P}(X\leq x) &&\end{flalign}$$
 Proprietà:
 - è continua a destra: $F(x)=\lim_{ \epsilon \to 0 }F(x+\epsilon)=F(x^{+})$
