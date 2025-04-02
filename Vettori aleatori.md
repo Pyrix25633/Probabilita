@@ -98,3 +98,21 @@ $$\begin{flalign}\mathrm{Var}(Z)=\mathrm{Var}(Y)+\frac{[\mathrm{Cov}(X,Y)]^{2}}{
 $$\begin{flalign}=\mathrm{Var}(Y)+\frac{[\mathrm{Cov}(X,Y)]^{2}}{\mathrm{Var}(X)\mathrm{Var}(Y)}\mathrm{Var}(Y)-2 \frac{[\mathrm{Cov}(X,Y)]^{2}}{\mathrm{Var}(X)\mathrm{Var}(Y)}\mathrm{Var}(Y) &&\end{flalign}$$
 $=\mathrm{Var}(Y)(1-\rho^{2}-2\rho^{2})=\mathrm{Var}(Y)(1-\rho^{2})$
 Se $\rho^{2}=1$ la dipendenza lineare è perfetta
+
+# Funzione generatrice di momenti
+$X$ variabile aleatoria, $t\in \mathbb{R}$
+La speranza matematica $\Phi_{X}(t):=\mathbb{E}[e^{tX}]$ è una formula analitica per calcolare i momenti di una variabile aleatoria
+Utilizzando lo sviluppo di Taylor
+$\Phi_{X}(t)=\mathbb{E}\left[ 1+tX+\frac{tX^{2}}{2!}+\dots \right]=1+t\mathbb{E}[X]+\frac{t^{2}}{2!}E[X^{2}]+\dots$
+Quindi
+$$\begin{flalign}\mathbb{E}[X^{n}]=\frac{d^{n}\Phi_{X}(t)}{dt^{n}}\bigg\rvert_{t=0}=\Phi_{X}^{(n)}(0) &&\end{flalign}$$
+$$\begin{flalign}\mathbb{E}[e^{tX}]=\begin{cases}
+\sum_{i}e^{tx_{i}}P(x_{i}) \\
+\int_{-\infty}^{+\infty}e^{tx}f(x) \,dx
+\end{cases} &&\end{flalign}$$
+Se converge esiste la funzione generatrice dei momenti, questa fissa tutti i momenti di $X$ e la determina univocamente
+
+$X_{1},X_{2}$ variabili aleatorie, $Y=X_{1}+X_{2}$
+$\Phi_{Y}(t)=\mathbb{E}[e^{tY}]=\mathbb{E}[e^{tX_{1}+tX_{2}}]=\mathbb{E}[e^{tX_{1}}\cdot e^{tX_{2}}]$
+Se $X_{1}\perp \!\!\! \perp X_{2}$
+$\Phi_{Y}(t)=\mathbb{E}[e^{tX_{1}}]\cdot \mathbb{E}[e^{tX_{2}}]=\Phi_{X_{1}}(t)\cdot \Phi_{X_{2}}(t)$
