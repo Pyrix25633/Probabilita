@@ -6,7 +6,7 @@ La coppia $(X,Y)$ è detta vettore aleatorio
 $F(x,y)=\mathbb{P}((X\leq x)\cap(Y\leq y))$
 Proprietà:
 - è continua da destra: $F(x,y)=\lim_{ \epsilon \to 0 }F(x+\epsilon,y)=\lim_{ \epsilon \to 0 }F(x,y+\epsilon)$
-- $$\begin{flalign}\lim_{ x \to -\infty } F(x,y)=0\\\lim_{ y \to -\infty }F(x,y)=0\\\lim_{ (x,y) \to (+\infty,+\infty) }F(x,y)=1 &&\end{flalign}$$
+- $$\begin{flalign}&\lim_{ x \to -\infty } F(x,y)=0\\&\lim_{ y \to -\infty }F(x,y)=0\\&\lim_{ (x,y) \to (+\infty,+\infty) }F(x,y)=1 &&\end{flalign}$$
 
 Inoltre:
 $\mathbb{P}((x_{1}<X\leq x_{2})\land(y_{1}<Y\leq y_{2}))=F(x_{2},y_{2})-F(x_{1},y_{2})-F(x_{2},y_{1})+F(x_{1},y_{1})$
@@ -34,7 +34,7 @@ $$\begin{flalign}\mathbb{E}[X]:=\begin{cases}
 \sum_{i}x_{i}P(x_{i})  \\
 \int_{-\infty}^{+\infty} xf(x)\,dx
 \end{cases} &&\end{flalign}$$
-se esiste finita è detta speranza matematica di $X$
+se esiste finita è detta speranza matematica o media o valore atteso di $X$
 $\varphi:\mathbb{R}\to \mathbb{R}\implies$
 $$\begin{flalign}\mathbb{E}[\varphi(X)]:=\begin{cases}
 \sum_{i}\varphi(x_{i})P(x_{i}) \\

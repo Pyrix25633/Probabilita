@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Modelli.md",
-                "mode": "preview",
+                "file": "Vettori aleatori.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Modelli"
+              "title": "Vettori aleatori"
             }
           }
         ]
@@ -166,12 +166,12 @@
   },
   "active": "d3c592e1c9d84162",
   "lastOpenFiles": [
+    "Variabili aleatorie.md",
+    "Modelli.md",
     "pdf/Modelli.pdf",
     "Vettori aleatori.md",
-    "Variabili aleatorie.md",
     "Teoremi base.md",
     "Notazione.md",
-    "Modelli.md",
     "Calcolo combinatorio.md",
     "pdf/Calcolo combinatorio.pdf",
     "pdf/Teoremi base.pdf",
@@ -197,7 +197,6 @@
     "Integrali.md",
     "Polinomi di Taylor.md",
     "Numeri complessi.md",
-    "Formulario formattato.pdf",
     "Trasformazioni di funzioni.md",
     "Pasted image 20241230094656.png",
     "Pasted image 20241230094004.png",
