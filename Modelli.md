@@ -24,6 +24,8 @@ $Y_{1}\sim \mathrm{Bin}(n_{1},p)$, $Y_{2}\sim \mathrm{Bin}(n_{2},p)$, $Y_{1}\per
 $Z\sim \mathrm{Bin}(n_{1}+n_{2},p)$
 $\Phi_{Z}(t)=\mathbb{E}[e^{tZ}]=\mathbb{E}[e^{tY_{1}+tY_{2}}]=\mathbb{E}[e^{tY_{1}}e^{tY_{2}}]=\mathbb{E}[e^{tY_{1}}]\cdot \mathbb{E}[e^{tY_{2}}]$$=(e^{t}p+q)^{n_{1}}(e^{t}p+q)=(e^{t}p+q)^{n_{1}+n_{2}}$
 
+<div class="page-break" style="page-break-before: always;"></div>
+
 # Variabile aleatoria geometrica
 Esperimenti indipendenti ripetuti con probabilità di successo costante
 Conta il numero di ripetizioni dell'esperimento fino al primo insuccesso

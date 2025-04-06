@@ -30,6 +30,8 @@ Somma logica: $A\cup B$ si verifica se almeno un evento si verifica
 Prodotto logico: $A\cap B$ si verifica se entrambi gli eventi si verificano
 Complementare: $\bar{A}$ o $A^{C}$ si verifica quando $A$ non si verifica
 Unione numerabile di eventi tra loro incompatibili: $E_{i}:E_{i}\cap E_{j}=\emptyset\;\;\forall i\neq j$ è partizione di $S$ se $S=\bigcup\limits_{i}E_{i}$
+<div class="page-break" style="page-break-before: always;"></div>
+
 ### Definizione
 E' una terna $(S,\mathcal{A},\mathbb{P})$
 

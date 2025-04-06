@@ -30,6 +30,7 @@ $P(x)=\mathbb{P}(X=x)$ è detta funzione massa di probabilità
 $$\begin{flalign}F(x_{1})=\sum_{x=x_{1}}P(x)  &&\end{flalign}$$
 $$\begin{flalign}\mathbb{P}(x_{i}<X\leq x_{j})=\sum_{x_{i}<x\leq x_{j}}P(x)\;\;x_{i}<x_{j}  &&\end{flalign}$$
 $$\begin{flalign}\sum_{-\infty<x<+\infty}P(x)=1\land P(x)\geq0\;\;\forall x \in \mathbb{R}  &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria continua
 $X$ è detta variabile aleatoria continua se la funzione di ripartizione è continua

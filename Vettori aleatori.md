@@ -21,6 +21,7 @@ $$\begin{flalign}f_{X}(x)=\int_{-\infty}^{+\infty} f(x,y)\,dy\\f_{Y}(y)=\int_{-\
 
 ### Funzioni di massa marginali
 $$\begin{flalign}P_{X}(x)=\sum_{i}P(x,y_{i})\\P_{Y}(y)=\sum_{i}P(x_{i},y)   &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Indipendenza
 $X,Y$ variabili aleatorie, $D_{X},D_{Y}$ sottoinsiemi degli insiemi di definizione di $X,Y\implies X\perp \!\!\! \perp Y$ se $\mathbb{P}((X\in D_{X})\cap(Y\in D_{Y}))=\mathbb{P}(X\in D_{X})\cdot \mathbb{P}(Y\in D_{Y})\;\;\forall D_{X},D_{Y}$
@@ -64,6 +65,7 @@ $$\begin{flalign}\mathrm{Var}(X)=\mathbb{E}[(X-\mathbb{E}[X])^{2}]=\begin{cases}
 Non è lineare e $\mathrm{Var}(a+bX)=b^{2}\mathrm{Var}(X)$
 
 $\mathrm{Var}(X+Y)=\mathrm{Var}(X)+\mathrm{Var}(Y)-2\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]$ misura la tendenza delle due variabili as assumere valori maggiori o minori della media "insieme"
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Covarianza
 $$\begin{flalign}\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=\begin{cases}
@@ -99,6 +101,8 @@ $Z:\mathbb{E}[Z]=0$ e $\mathrm{Var}(Z)$ è minima
 $\mathbb{E}[Y]=a\mathbb{E}[X]+b+\mathbb{E}[Z]\implies b=\mathbb{E}[Y]-a\mathbb{E}[X]$
 $Z=Y-aX+b\implies \mathrm{Var}(Z)=\mathrm{Var}(Y)+a^{2}\mathrm{Var}(X)-2a\mathrm{Cov}(X,Y)$
 $$\begin{flalign} \frac{d\mathrm{Var}(Z)}{da}=2a\mathrm{Var}(X)-2\mathrm{Cov}(X,Y) &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
+
 Il minimo corrisponde a $2a\mathrm{Var}(X)-2a\mathrm{Cov}(X,Y)=0\implies$
 $$\begin{flalign}a=\frac{\mathrm{Cov}(X,Y)}{\mathrm{Var}(X)} &&\end{flalign}$$
 $$\begin{flalign}\mathrm{Var}(Z)=\mathrm{Var}(Y)+\frac{[\mathrm{Cov}(X,Y)]^{2}}{[\mathrm{Var}(X)]^{2}}\mathrm{Var}(X)-2 \frac{\mathrm{Cov}(X,Y)}{\mathrm{Var}(X)}\mathrm{Cov}(X,Y)=
