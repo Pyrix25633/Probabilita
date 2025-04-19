@@ -58,13 +58,16 @@ Se $X\perp \!\!\! \perp Y$ continue $f(x,y)=f_{X}(x)\cdot f_{Y}(y)\implies$
 $$\begin{flalign}\mathbb{E}[(X,Y)]=\left( \int_{-\infty}^{+\infty} xf_{X}(x)\,dx \right)\left( \int_{-\infty}^{+\infty}yf_{Y}(y) \,dy \right) &&\end{flalign}$$
 
 # Varianza
-$$\begin{flalign}\mathrm{Var}[X]=\mathbb{E}[(X-\mathbb{E}[X])^{2}]=\begin{cases}
+$$\begin{flalign}\mathrm{Var}[X]&=\mathbb{E}[(X-\mathbb{E}[X])^{2}]=\begin{cases}
 \sum_{i}(x_{i}-\mathbb{E}[X])^{2}P(x_{i}) \\
 \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])^{2}f(x)\,dx
-\end{cases} &&\end{flalign}$$
+\end{cases}\\
+&=\mathbb{E}[X^{2}-2\cdot X\cdot\mathbb{E}[X]-\mathbb{E}[X]^{2}]=\mathbb{E}[X^{2}]-2\cdot\mathbb{E}[X]\cdot\mathbb{E}[X]+\mathbb{E}[1]\cdot \mathbb{E}[X]^{2}\\
+&=\mathbb{E}[X^{2}]-2\mathbb{E}[X]^{2}+\mathbb{E}[X]^{2}=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}
+&&\end{flalign}$$
 Non è lineare e $\mathrm{Var}[a+bX]=b^{2}\mathrm{Var}[X]$
 
-$\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]-2\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]$ misura la tendenza delle due variabili as assumere valori maggiori o minori della media "insieme"
+$\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]-2\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]$ misura la tendenza delle due variabili ad assumere valori maggiori o minori della media "insieme"
 <div class="page-break" style="page-break-before: always;"></div>
 
 # Covarianza
