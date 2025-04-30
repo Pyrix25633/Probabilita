@@ -56,6 +56,8 @@ $$\begin{flalign}\mathbb{E}[Z]=\frac{d\Phi_{Z}(t)}{dt}\bigg\rvert_{t=0}=e^{\mu\c
 $$\begin{flalign}\mathbb{E}[Z^{2}]=\frac{d^{2}\Phi_{Z}(t)}{dt^{2}}\bigg\rvert_{t=0}=\mu^{2}+\mu &&\end{flalign}$$
 $\mathrm{Var}[Z]=\mathbb{E}[Z^{2}]-\mathbb{E}[Z]^{2}=\mu^{2}+\mu-\mu^{2}=\mu$
 
+<div class="page-break" style="page-break-before: always;"></div>
+
 Inoltre è riproducibile
 $Z_{1}\sim \mathrm{Pois(\mu_{1})}\perp \!\!\! \perp Z_{2}\sim \mathrm{Pois(\mu_{2})}$, $Z=Z_{1}+Z_{2}$
 $\Phi_{Z}(t)=\Phi_{Z_{1}}(t)\cdot \Phi_{Z_{2}}(t)=e^{\mu_{1}\cdot(e^{t}-1)}\cdot e^{\mu_{2}\cdot(e^{t-1})}=e^{(\mu_{1}+\mu_{2})(e^{t}-1)}\implies Z\sim \mathrm{Pois(\mu_{1}+\mu_{2})}$
@@ -83,3 +85,45 @@ $$\begin{flalign}P_{Y}(y)=\binom{y+m-1}{y}\cdot p^{m}\cdot(1-p)^{y} &&\end{flali
 Si può anche scrivere come somma di $y$ geometriche indipendenti $X_{i}\sim \mathrm{Geo(p)}$ con $p$ identica
 $$\begin{flalign}\Phi_{Y}(t)=\mathbb{E}[e^{tY}]=\mathbb{E}\left[ e^{t\sum_{i=1}^{y}X_{i}} \right]=\prod_{i=1}^{y}\mathbb{E}[e^{tX_{i}}]=\frac{(1-p)^{y}}{(1-e^{t}p)^{y}} &&\end{flalign}$$
 $$\begin{flalign}\mathbb{E}[Y]=\mathbb{E}\left[ \sum_{i=1}^{y}X_{i} \right]=\sum_{i=1}^{y}\mathbb{E}[X_{i}]=\frac{yp}{1-p} &&\end{flalign}$$
+
+# Variabile aleatoria uniforme
+$X\sim \mathrm{Unif}(a,b)$
+$$\begin{flalign}f_{X}(x)=\begin{cases}
+\frac{1}{b-a},&x \in[a,b] \\
+0,&x \notin[a,b]
+\end{cases} &&\end{flalign}$$
+$$\begin{flalign}\Phi_{X}(t)=\mathbb{E}[e^{tX}]=\int_{a}^{b}e^{tx}\cdot \frac{1}{b-a}\,dx=\frac{e^{tb}-e^{ta}}{(b-a)\cdot t} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
+
+Si può definire una trasformazione
+$\varphi:[a,b]\to[0,1]$, $\varphi(y)=\frac{y-a}{b-a}$
+$$\begin{flalign} \frac{X-a}{b-a}=Y\sim \mathrm{Unif}(0,1) &&\end{flalign}$$
+$$\begin{flalign}f_{Y}(y)=\begin{cases}
+1,&y\in[0,1] \\
+0,&y\notin[0,1]
+\end{cases} &&\end{flalign}$$
+$$\begin{flalign}\Phi_{Y}(t)=\mathbb{E}[e^{tY}]=\frac{e^{t}-1}{t} &&\end{flalign}$$
+$$\begin{flalign}\mathbb{E}[Y]=\frac{d\Phi_{Y}(t)}{dt}\bigg\rvert_{t=0}=\frac{d}{dt}\left( \frac{e^{t}-1}{t} \right)\bigg\rvert_{t=0}=\frac{te^{t}-(e^{t}-1)}{t^{2}}\bigg\rvert_{t=0}=\lim_{ t \to 0 } \frac{t\cdot e^{t}}{2t}=\frac{1}{2} &&\end{flalign}$$
+$$\begin{flalign}\mathrm{Var}[Y]=\frac{1}{12} &&\end{flalign}$$
+Ora si possono riutilizzare i calcoli per $X=Y\cdot(b-a)+a$
+$$\begin{flalign}\mathbb{E}[X]=\mathbb{E}[Y\cdot(b-a)+a]=(b-a)\cdot\mathbb{E}[Y]+a=\frac{b-a}{2}+a=\frac{b+a}{2} &&\end{flalign}$$
+$$\begin{flalign}\mathrm{Var}[X]=\mathrm{Var}[Y\cdot(b-a)+a]=(b-a)^{2}\cdot \mathrm{Var}[Y]=\frac{(b-a)^{2}}{12} &&\end{flalign}$$
+
+# Variabile aleatoria esponenziale
+$\mu=\lambda x$, $Y\sim \mathrm{Pois}(\mu)$
+$$\begin{flalign}P_{Y}(y)=\frac{(\lambda x)^{y}}{y!}\cdot e^{-\lambda x} &&\end{flalign}$$
+con $y\in \mathbb{N}$
+$x$ indica il tempo di funzionamento di un sistema riparabile, $Y$ conta gli eventi guasto
+La probabilità di non osservare guasti in $[0,x]$ è $\mathbb{P}(Y=0)=P_{Y}(0)=e^{-\lambda x}$, $x,\lambda>0$
+Allo stesso modo non osservare guasti entro un tempo $x$ equivale al corretto funzionamento per tale tempo
+$X\sim \mathrm{Exp}(\lambda)$ conta il tempo di funzionamento, $\mathbb{P}(X>x)=e^{-\lambda x}$ e $F_{X}(x)=\mathbb{P}(X\leq x)=1-e^{-\lambda x}$
+$f_{X}(x)=\lambda\cdot e^{-\lambda x}$, $x>0$
+Viene utilizzata per misurare attese, code, decadimenti e rotture improvvise
+$$\begin{flalign}\Phi_{X}(t)=\mathbb{E}[e^{tX}]=\int_{0}^{+\infty}e^{-(\lambda-t)\cdot x}\,dx=\frac{\lambda}{\lambda-t} &&\end{flalign}$$
+con $t<\lambda$
+$$\begin{flalign}\mathbb{E}[X]=\frac{d\Phi_{X}(t)}{dt}\bigg\rvert_{y=0}=\frac{1}{\lambda} &&\end{flalign}$$
+$$\begin{flalign}\mathrm{Var}[X]=\frac{1}{\lambda^{2}} &&\end{flalign}$$
+Vige della proprietà di assenza di memoria, dati $x_{2}>x_{1}$, $x_{2}=x_{1}+x$ ($x>0$)
+$$\begin{flalign}\mathbb{P}(X>x_{2}|X>x_{1})&=\frac{\mathbb{P}((X>x_{2})\cap(X>x_{1}))}{\mathbb{P}(X>x_{1})}=\frac{\mathbb{P}(X>x_{2})}{\mathbb{P}(X>x_{1})}=\frac{1-F_{X}(x_{2})}{1-F_{X}(x_{1})}\\
+&=\frac{e^{-\lambda(x_{1}+x)}}{e^{-\lambda x_{1}}}=\frac{e^{-\lambda x_{1}}\cdot e^{-\lambda x}}{e^{-\lambda x_{1}}}=e^{-\lambda x}=\mathbb{P}(X>x)
+&&\end{flalign}$$
