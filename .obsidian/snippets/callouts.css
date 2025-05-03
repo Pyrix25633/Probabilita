@@ -1,0 +1,24 @@
+.callout[data-callout="definizione"] {
+    --callout-color: 50, 150, 255;
+    --callout-icon: lucide-notebook-text;
+}
+
+.callout[data-callout="formule"] {
+    --callout-color: 50, 240, 100;
+    --callout-icon: lucide-square-function;
+}
+
+.callout[data-callout="dimostrazione"] {
+    --callout-color: 0, 170, 255;
+    --callout-icon: lucide-circle-plus;
+}
+
+.callout[data-callout="teorema"] {
+    --callout-color: 255, 0, 0;
+    --callout-icon: lucide-book-type;
+}
+
+.callout[data-callout="esempio"] {
+    --callout-color: 0, 0, 255;
+    --callout-icon: lucide-chart-spline;
+}

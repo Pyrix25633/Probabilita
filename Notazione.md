@@ -32,25 +32,25 @@ Complementare: $\bar{A}$ o $A^{C}$ si verifica quando $A$ non si verifica
 Unione numerabile di eventi tra loro incompatibili: $E_{i}:E_{i}\cap E_{j}=\emptyset\;\;\forall i\neq j$ è partizione di $S$ se $S=\bigcup\limits_{i}E_{i}$
 <div class="page-break" style="page-break-before: always;"></div>
 
-### Definizione
-E' una terna $(S,\mathcal{A},\mathbb{P})$
-
-### $S$
+> [!definizione]
+> E' una terna $(S,\mathcal{A},\mathbb{P})$
+> 
+> ### $S$
 Spazio campione/campionario, contiene tutti i possibili eventi
-
-### $\mathcal{A}$
-Famiglia di sottoinsiemi di $S$ a cui si può assegnare una probabilità
-Proprietà:
-- $S\in \mathcal{A}$
-- Se $A\in \mathcal{A}\implies \bar{A}\in \mathcal{A}$
-- Se $\{ A_{i} \}\subset \mathcal{A}\implies \bigcup\limits_{i=1}^{\infty}A_{i}\in \mathcal{A}\land \bigcap\limits_{i=1}^{\infty}A_{i}\in \mathcal{A}$
-
-### $\mathbb{P}$
-Misura di probabilità su $(S,\mathcal{A})$
-$\mathbb{P}:\mathcal{A}\to[0,1]$
-Proprietà:
-- $\forall A\in \mathcal{A}\;\;\mathbb{P}(A)\geq0\land \mathbb{P}(S)=1$
-- Se $\{ A_{i} \}\subset \mathcal{A}:A_{i}\cap A_{j}=\emptyset\;\;\forall i\neq j\implies \mathbb{P}\left( \bigcup\limits_{i}A_{i} \right)=\sum\limits_{i}\mathbb{P}(A_{i})$
+> 
+> ### $\mathcal{A}$
+> Famiglia di sottoinsiemi di $S$ a cui si può assegnare una probabilità
+> Proprietà:
+> - $S\in \mathcal{A}$
+> - Se $A\in \mathcal{A}\implies \bar{A}\in \mathcal{A}$
+> - Se $\{ A_{i} \}\subset \mathcal{A}\implies \bigcup\limits_{i=1}^{\infty}A_{i}\in \mathcal{A}\land \bigcap\limits_{i=1}^{\infty}A_{i}\in \mathcal{A}$
+> 
+> ### $\mathbb{P}$
+> Misura di probabilità su $(S,\mathcal{A})$
+> $\mathbb{P}:\mathcal{A}\to[0,1]$
+> Proprietà:
+> - $\forall A\in \mathcal{A}\;\;\mathbb{P}(A)\geq0\land \mathbb{P}(S)=1$
+> - Se $\{ A_{i} \}\subset \mathcal{A}:A_{i}\cap A_{j}=\emptyset\;\;\forall i\neq j\implies \mathbb{P}\left( \bigcup\limits_{i}A_{i} \right)=\sum\limits_{i}\mathbb{P}(A_{i})$
 
 ### Costruzione di $S$
 $A,B,C$ eventi

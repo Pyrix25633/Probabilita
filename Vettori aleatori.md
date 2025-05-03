@@ -62,18 +62,17 @@ $$\begin{flalign}\mathrm{Var}[X]&=\mathbb{E}[(X-\mathbb{E}[X])^{2}]=\begin{cases
 \sum_{i}(x_{i}-\mathbb{E}[X])^{2}P(x_{i}) \\
 \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])^{2}f(x)\,dx
 \end{cases}\\
-&=\mathbb{E}[X^{2}-2\cdot X\cdot\mathbb{E}[X]-\mathbb{E}[X]^{2}]=\mathbb{E}[X^{2}]-2\cdot\mathbb{E}[X]\cdot\mathbb{E}[X]+\mathbb{E}[1]\cdot \mathbb{E}[X]^{2}\\
+&=\mathbb{E}[X^{2}-2\cdot X\cdot\mathbb{E}[X]+\mathbb{E}[X]^{2}]=\mathbb{E}[X^{2}]-2\cdot\mathbb{E}[X]\cdot\mathbb{E}[X]+\mathbb{E}[1]\cdot \mathbb{E}[X]^{2}\\
 &=\mathbb{E}[X^{2}]-2\mathbb{E}[X]^{2}+\mathbb{E}[X]^{2}=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}
 &&\end{flalign}$$
+Misura la tendenza di $X$ ad assumere valori maggiori o minori della media
 Non è lineare e $\mathrm{Var}[a+bX]=b^{2}\mathrm{Var}[X]$
-
-$\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]-2\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]$ misura la tendenza delle due variabili ad assumere valori maggiori o minori della media "insieme"
 <div class="page-break" style="page-break-before: always;"></div>
 
 # Covarianza
 $$\begin{flalign}\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=\begin{cases}
 \sum_{i}\sum_{j}(x_{i}-\mathbb{E}[X])(y_{j}-\mathbb{E}[Y])P(x_{i},y_{j}) \\
-\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])(y-\mathbb{E}[Y])\,dx\,dy
+\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])(y-\mathbb{E}[Y])f(x,y)\,dx\,dy
 \end{cases} &&\end{flalign}$$
 
 Se $X\perp \!\!\! \perp Y\implies \mathrm{Cov}(X,Y)=0\implies$$\mathrm{Var}[X+Y]=\mathrm{Var}[X]+\mathrm{Var}[Y]$
@@ -82,7 +81,7 @@ $$\begin{flalign}\mathrm{Cov}(X,Y)=\left( \int_{-\infty}^{+\infty} (x-\mathbb{E}
 $$\begin{flalign}\int_{-\infty}^{+\infty} xf_{X}(x)\,dx-\int_{-\infty}^{+\infty} \mathbb{E}[X]f_{X}(x)\,dx=\mathbb{E}[X]-1\mathbb{E}[X]\cdot1=0 &&\end{flalign}$$
 Analogamente per $y$
 
-$\mathrm{Var}[aX+bY]=a^{2}\mathrm{Var}[X]+b^{2}\mathrm{Var}[Y]+2ab\mathrm{Cov}(X,Y)$
+$\mathrm{Var}[aX+bY]=a^{2}\mathrm{Var}[X]+b^{2}\mathrm{Var}[Y]+2ab\mathrm{Cov}(X,Y)$ misura la tendenza delle due variabili ad assumere valori maggiori o minori della media "insieme"
 
 # Correlazione
 $X,Y$ variabili aleatorie legate da una relazione lineare $Y=aX+b\;\;a,b\in \mathbb{R}$
