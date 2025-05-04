@@ -13,7 +13,9 @@ Gli elementi misurabili di $S$ sono quelli in $\mathcal{A}$
 > Proprietà:
 > - è continua a destra: $F(x)=\lim_{ \epsilon \to 0 }F(x+\epsilon)=F(x^{+})$
 > - è monotona crescente: se $x_{2}>x_{1}\implies F(x_{2})\geq F(x_{1})$
-> - $\lim_{ x \to -\infty }F(x)=0$ e $\lim_{ x \to +\infty }F(x)\implies F(x)\in[0,1] \;\;\forall x \in \mathbb{R}$
+> - $\lim_{ x \to -\infty }F(x)=0$ e $\lim_{ x \to +\infty }F(x)=1\implies F(x)\in[0,1] \;\;\forall x \in \mathbb{R}$
+> 
+> <audio controls src="audio/variabili_aleatorie/funzione_di_ripartizione_definizione.mp3"></audio>
 
 > [!formule]
 > $\mathbb{P}(X>x)=1-F(x)$
@@ -22,11 +24,11 @@ Gli elementi misurabili di $S$ sono quelli in $\mathcal{A}$
 > 
 > $\mathbb{P}(x_{1}<X\leq x_{2})=F(x_{2})-F(x_{1})$
 > > [!dimostrazione]-
-> $x_{2}>x_{1}\implies \mathbb{P}(X\leq x_{1})+\mathbb{P}(x_{1}<X\leq x_{2})=\mathbb{P}(X\leq x_{2})$
+> $x_{2}>x_{1}\implies \mathbb{P}(X\leq x_{1})+\mathbb{P}(x_{1}<X\leq x_{2})=\mathbb{P}(X\leq x_{2})\implies$$F(x_{1})+\mathbb{P}(x_{1}< X\leq x_{2})=F(x_{2})\implies\dots$
 > 
 > $\mathbb{P}(X=x)=F(x)-F(x^{-})$
 > > [!dimostrazione]-
-> > $x_{1}=x-\epsilon,\;x_{2}=x\;\;\forall\epsilon>0\implies$$\lim_{ \epsilon \to 0 }\mathbb{P}(x_{1}<X\leq x_{2})=\lim_{ \epsilon \to 0 }\mathbb{P}(x-\epsilon<X\leq x)$
+> > $x_{1}=x-\epsilon,\;x_{2}=x\;\;\forall\epsilon>0\implies$$\lim_{ \epsilon \to 0 }\mathbb{P}(x_{1}<X\leq x_{2})=\lim_{ \epsilon \to 0 }\mathbb{P}(x-\epsilon<X\leq x)=\mathbb{P}(x^{-}<X\leq x)={\dots}$
 > 
 > $$\begin{flalign}F(x|X>x_{0})=\frac{F(x)-F(x_{0})}{1-F(x_{0})} &&\end{flalign}$$
 > > [!dimostrazione]-

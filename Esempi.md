@@ -60,3 +60,47 @@ width=600; height=300;
 y=0|x<0|green
 y=-(2/3)e^{-(2/3)x}+2/3|x>=0|green
 ```
+
+# Funzione di ripartizione congiunta
+$x_{1}=2,x_{2}=4,y_{1}=\frac{1}{2},y_{2}=1$
+$F(x_{2},y_{2})$:
+```desmos-graph
+left=-0.5; right=5.5; top=1.5; bottom=-0.5;
+width=600; height=300;
+---
+y<=1|x<=4|blue
+x=4|y<=1|blue
+```
+$F(x_{1},y_{2})$:
+```desmos-graph
+left=-0.5; right=5.5; top=1.5; bottom=-0.5;
+width=600; height=300;
+---
+y<=1|x<=2|orange
+x=2|y<=1|orange
+```
+$F(x_{2},y_{1})$:
+```desmos-graph
+left=-0.5; right=5.5; top=1.5; bottom=-0.5;
+width=600; height=300;
+---
+y<=1/2|x<=4|purple
+x=4|y<=1/2|purple
+```
+$F(x_{1},y_{1})$:
+```desmos-graph
+left=-0.5; right=5.5; top=1.5; bottom=-0.5;
+width=600; height=300;
+---
+y<=1/2|x<=2|red
+x=2|y<=1/2|red
+```
+$\mathbb{P}((x_{1}<X\leq x_{2})\cap(y_{1}<Y\leq y_{2}))$:
+```desmos-graph
+left=-0.5; right=5.5; top=1.5; bottom=-0.5;
+width=600; height=300;
+---
+1/2<y<=1|2<x<=4|green
+x=4|1/2<y<=1|green
+x=2|1/2<y<=1|green|dashed
+```
