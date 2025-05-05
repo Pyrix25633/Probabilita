@@ -10,7 +10,7 @@
 
 .callout[data-callout="dimostrazione"] {
     --callout-color: 0, 170, 255;
-    --callout-icon: lucide-circle-plus;
+    --callout-icon: lucide-file-check;
 }
 
 .callout[data-callout="teorema"] {
@@ -21,4 +21,9 @@
 .callout[data-callout="esempio"] {
     --callout-color: 0, 0, 255;
     --callout-icon: lucide-chart-spline;
+}
+
+.callout[data-callout="approfondimento"] {
+    --callout-color: 255, 167, 0;
+    --callout-icon: lucide-book-plus;
 }

@@ -28,7 +28,7 @@ Gli elementi misurabili di $S$ sono quelli in $\mathcal{A}$
 > 
 > $\mathbb{P}(X=x)=F(x)-F(x^{-})$
 > > [!dimostrazione]-
-> > $x_{1}=x-\epsilon,\;x_{2}=x\;\;\forall\epsilon>0\implies$$\lim_{ \epsilon \to 0 }\mathbb{P}(x_{1}<X\leq x_{2})=\lim_{ \epsilon \to 0 }\mathbb{P}(x-\epsilon<X\leq x)=\mathbb{P}(x^{-}<X\leq x)={\dots}$
+> > $x_{1}=x-\varepsilon,\;x_{2}=x\;\;\forall\varepsilon>0\implies$$\lim_{ \varepsilon \to 0 }\mathbb{P}(x_{1}<X\leq x_{2})=\lim_{ \varepsilon \to 0 }\mathbb{P}(x-\varepsilon<X\leq x)=\mathbb{P}(x^{-}<X\leq x)={\dots}$
 > 
 > $$\begin{flalign}F(x|X>x_{0})=\frac{F(x)-F(x_{0})}{1-F(x_{0})} &&\end{flalign}$$
 > > [!dimostrazione]-

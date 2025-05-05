@@ -86,6 +86,7 @@ Si può anche scrivere come somma di $y$ geometriche indipendenti $X_{i}\sim \ma
 $$\begin{flalign}\Phi_{Y}(t)=\mathbb{E}[e^{tY}]=\mathbb{E}\left[ e^{t\sum_{i=1}^{y}X_{i}} \right]=\prod_{i=1}^{y}\mathbb{E}[e^{tX_{i}}]=\frac{(1-p)^{y}}{(1-e^{t}p)^{y}} &&\end{flalign}$$
 $$\begin{flalign}\mathbb{E}[Y]=\mathbb{E}\left[ \sum_{i=1}^{y}X_{i} \right]=\sum_{i=1}^{y}\mathbb{E}[X_{i}]=\frac{yp}{1-p} &&\end{flalign}$$
 
+---
 # Variabile aleatoria uniforme
 $X\sim \mathrm{Unif}(a,b)$
 $$\begin{flalign}f_{X}(x)=\begin{cases}
