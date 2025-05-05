@@ -25,6 +25,7 @@ Gli elementi misurabili di $S$ sono quelli in $\mathcal{A}$
 > $\mathbb{P}(x_{1}<X\leq x_{2})=F(x_{2})-F(x_{1})$
 > > [!dimostrazione]-
 > $x_{2}>x_{1}\implies \mathbb{P}(X\leq x_{1})+\mathbb{P}(x_{1}<X\leq x_{2})=\mathbb{P}(X\leq x_{2})\implies$$F(x_{1})+\mathbb{P}(x_{1}< X\leq x_{2})=F(x_{2})\implies\dots$
+> <div class="page-break" style="page-break-before: always;"></div>
 > 
 > $\mathbb{P}(X=x)=F(x)-F(x^{-})$
 > > [!dimostrazione]-
@@ -48,6 +49,7 @@ $X$ è detta variabile aleatoria discreta se la funzione di ripartizione è a gr
 > $$\begin{flalign}\sum_{-\infty<x<+\infty}P(x)=1\land P(x)\geq0\;\;\forall x \in \mathbb{R}  &&\end{flalign}$$
 > 
 > <audio controls src="audio/variabili_aleatorie/funzione_di_massa.mp3"></audio>
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!formule]
 > $\mathbb{P}(x<X)=F(x)-P(x)$
@@ -56,6 +58,7 @@ $X$ è detta variabile aleatoria discreta se la funzione di ripartizione è a gr
 
 > [!esempio]-
 > ![Massa di probabilità](Esempi.md#Massa%20di%20probabilità)
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Densità di probabilità
 $X$ è detta variabile aleatoria continua se la funzione di ripartizione è continua
@@ -75,6 +78,7 @@ $$\begin{flalign}\int_{-\infty}^{+\infty}f(t) \,dt=1\land f(x)\geq0\;\;\forall x
 > $\mathbb{P}(X< x)=\mathbb{P}(X\leq x)$
 > > [!dimostrazione]-
 > > $$\begin{flalign} {\dots}=\mathbb{P}(X\leq x)-\mathbb{P}(X=x)=\int_{-\infty}^{x}f(t) \,dt-\int_{x}^{x} f(t)\,dt=\int_{-\infty}^{x} f(t)\,dt={\dots}&&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!esempio]-
 > ![Densità di probabilità](Esempi.md#Densità%20di%20probabilità)
