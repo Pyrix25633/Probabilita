@@ -90,6 +90,8 @@ width=600; height=300;
 y<=1/2|x<=4|purple
 x=4|y<=1/2|purple
 ```
+<div class="page-break" style="page-break-before: always;"></div>
+
 $F(x_{1},y_{1})$:
 ```desmos-graph
 left=-0.5; right=5.5; top=1.5; bottom=-0.5;
@@ -125,6 +127,8 @@ width=600; height=300;
 y=x+1|-1<=x<=0|blue
 y=-x+1|0<=x<=1|blue
 ```
+<div class="page-break" style="page-break-before: always;"></div>
+
 $$\begin{flalign}f(y)=\begin{cases}
 -\frac{2}{3}|x|+1,&-\frac{3}{2}\leq x\leq \frac{3}{2} \\
 0,&\text{elsewhere}

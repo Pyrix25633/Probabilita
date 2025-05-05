@@ -12,6 +12,7 @@
 
 > [!formule]
 > $\mathbb{P}((x_{1}<X\leq x_{2})\cap(y_{1}<Y\leq y_{2}))=F(x_{2},y_{2})-F(x_{1},y_{2})-F(x_{2},y_{1})+F(x_{1},y_{1})$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!esempio]-
 > ![Funzione di ripartizione congiunta](Esempi.md#Funzione%20di%20ripartizione%20congiunta)
@@ -24,6 +25,7 @@
 > 
 > ### Funzioni di densità marginali
 > $$\begin{flalign}f_{X}(x)=\int_{-\infty}^{+\infty} f(x,y)\,dy\\f_{Y}(y)=\int_{-\infty}^{+\infty} f(x,y)\,dx &&\end{flalign}$$
+> <div class="page-break" style="page-break-before: always;"></div>
 > 
 > ### Funzioni di massa marginali
 > $$\begin{flalign}P_{X}(x)=\sum_{i}P(x,y_{i})\\P_{Y}(y)=\sum_{i}P(x_{i},y)   &&\end{flalign}$$
@@ -56,6 +58,7 @@
 
 > [!formule] Linearità
 > $\mathbb{E}[a+bX]=a+b\mathbb{E}[X]\;\;\forall a,b\in \mathbb{R}$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!definizione]
 > $(X,Y)$ vettore aleatorio
@@ -87,6 +90,7 @@
 \end{cases}
 &&\end{flalign}$$
 > Misura la tendenza di $X$ ad assumere valori maggiori o minori della media, quindi se $\mathrm{Var}[X]$ è vicina a 0 allora $\mathbb{P}(X\neq \mathbb{E}[X])$ è molto bassa
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!formule]
 > $\mathrm{Var}[X]=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}$
@@ -100,6 +104,7 @@
 
 > [!esempio]-
 > ![Varianza](Esempi.md#Varianza)
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Covarianza
 > [!definizione]
@@ -126,6 +131,7 @@
 > > $\mathbb{E}[Y]=a\mathbb{E}[X]+b\implies Y-\mathbb{E}[Y]=a(X-\mathbb{E}[X])$
 > > $$\begin{flalign}\mathrm{Cov}(X,Y)&=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=\mathbb{E}[(X-\mathbb{E}[X])a(X-\mathbb{E}[X])]\\&=\mathbb{E}[a(X-\mathbb{E}[X])^{2}]=a\mathrm{Var}[X]=\frac{1}{a}\mathrm{Var}[Y] &&\end{flalign}$$
 > > $\implies[\mathrm{Cov}(X,Y)]^{2}=a\mathrm{Var}[X] \frac{1}{a}\mathrm{Var}[Y]={\dots}$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Coefficiente di correlazione
 > [!definizione]
@@ -153,6 +159,7 @@
 > $$\begin{flalign}=\mathrm{Var}[Y]+\frac{[\mathrm{Cov}(X,Y)]^{2}}{\mathrm{Var}[X]\mathrm{Var}[Y]}\mathrm{Var}[Y]-2 \frac{[\mathrm{Cov}(X,Y)]^{2}}{\mathrm{Var}[X]\mathrm{Var}[Y]}\mathrm{Var}[Y] &&\end{flalign}$$
 > $=\mathrm{Var}[Y](1-\rho^{2}-2\rho^{2})=\mathrm{Var}[Y](1-\rho^{2})$
 > Se $\rho^{2}=1$ la dipendenza lineare è perfetta
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Funzione generatrice di momenti
 > [!definizione]
