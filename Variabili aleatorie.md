@@ -34,16 +34,20 @@ Gli elementi misurabili di $S$ sono quelli in $\mathcal{A}$
 > > [!dimostrazione]-
 > > $(X>x_{0})$ evento, $x>x_{0}$$$\begin{flalign}{\dots}=\mathbb{P}(X\leq x|X>x_{0})=\frac{\mathbb{P}((X\leq x)\cap(X> x_{0}))}{\mathbb{P}(X>x_{0})}=\frac{\mathbb{P}(x_{0}<X\leq x)}{1-F(x_{0})}={\dots}&&\end{flalign}$$
 
+<audio controls src="audio/variabili_aleatorie/intro.mp3"></audio>
+
 # Massa di probabilità
 $X$ è detta variabile aleatoria discreta se la funzione di ripartizione è a gradini, le discontinuità hanno ampiezza $F(x)-F(x^{-})=\mathbb{P}(X=x)$
 
 > [!definizione]
 > $P(x)=\mathbb{P}(X=x)$ è detta funzione massa di probabilità o anche **Probability Mass Function**
 > Fornisce la probabilità che la variabile aleatoria assuma un certo valore, pertanto
-> $$\begin{flalign}F(x_{1})=\sum_{x=x_{1}}P(x)  &&\end{flalign}$$
+> $$\begin{flalign}F(x_{1})=\sum_{x=-\infty}^{x_{1}}P(x)  &&\end{flalign}$$
 > $$\begin{flalign}\mathbb{P}(x_{i}<X\leq x_{j})=\sum_{x_{i}<x\leq x_{j}}P(x)\;\;x_{i}<x_{j}  &&\end{flalign}$$
 > Soddisfa le seguenti proprietà:
 > $$\begin{flalign}\sum_{-\infty<x<+\infty}P(x)=1\land P(x)\geq0\;\;\forall x \in \mathbb{R}  &&\end{flalign}$$
+> 
+> <audio controls src="audio/variabili_aleatorie/funzione_di_massa.mp3"></audio>
 
 > [!formule]
 > $\mathbb{P}(x<X)=F(x)-P(x)$
@@ -58,12 +62,14 @@ $X$ è detta variabile aleatoria continua se la funzione di ripartizione è cont
 
 > [!definizione]
 > $$\begin{flalign}f(x)=\lim_{ \Delta x \to 0 } \frac{F(x+\Delta x)-F(x)}{\Delta x}=\frac{dF(x)}{dx}  &&\end{flalign}$$
-> è detta funzione densità di probabilità
+> è detta funzione densità di probabilità o anche **Probability Density Function**
 > Fornisce la probabilità che la variabile aleatoria assuma uno specifico valore, quindi
 > $$\begin{flalign}F(x_{1})=\int_{-\infty}^{x_{1}}f(t) \,dt &&\end{flalign}$$
 > $$\begin{flalign}\mathbb{P}(x_{1}\leq X\leq x_{2})=\int_{x_{1}}^{x_{2}} f(t)\,dt\;\;x_{1}\leq x_{2} &&\end{flalign}$$
 > Soddisfa le seguenti proprietà:
 $$\begin{flalign}\int_{-\infty}^{+\infty}f(t) \,dt=1\land f(x)\geq0\;\;\forall x \in \mathbb{R} &&\end{flalign}$$
+> 
+> <audio controls src="audio/variabili_aleatorie/funzione_di_densità.mp3"></audio>
 
 > [!formule]
 > $\mathbb{P}(X< x)=\mathbb{P}(X\leq x)$
