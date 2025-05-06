@@ -2,6 +2,7 @@
 > [!definizione] Definizione
 $(S,\mathcal{A},\mathbb{P})$ spazio di probabilità
 La funzione $X:S\to \mathbb{R}$ è variabile aleatoria $\iff X$ è misurabile in $(S,\mathcal{A})$
+Ovvero $(X\leq x)=\{ \omega \in S:X(\omega)\leq x \}\in \mathcal{A}$
 
 Gli elementi misurabili di $S$ sono quelli in $\mathcal{A}$
 
@@ -43,8 +44,8 @@ $X$ è detta variabile aleatoria discreta se la funzione di ripartizione è a gr
 > [!definizione]
 > $P(x)=\mathbb{P}(X=x)$ è detta funzione massa di probabilità o anche **Probability Mass Function**
 > Fornisce la probabilità che la variabile aleatoria assuma un certo valore, pertanto
-> $$\begin{flalign}F(x_{1})=\sum_{x=-\infty}^{x_{1}}P(x)  &&\end{flalign}$$
-> $$\begin{flalign}\mathbb{P}(x_{i}<X\leq x_{j})=\sum_{x_{i}<x\leq x_{j}}P(x)\;\;x_{i}<x_{j}  &&\end{flalign}$$
+> $$\begin{flalign}F(x_{1})=\sum_{x\leq x_{1}}P(x)  &&\end{flalign}$$
+> $$\begin{flalign}\mathbb{P}(x_{1}<X\leq x_{2})=\sum_{x_{1}<x\leq x_{2}}P(x)\;\;x_{1}<x_{2}  &&\end{flalign}$$
 > Soddisfa le seguenti proprietà:
 > $$\begin{flalign}\sum_{-\infty<x<+\infty}P(x)=1\land P(x)\geq0\;\;\forall x \in \mathbb{R}  &&\end{flalign}$$
 > 

@@ -119,7 +119,7 @@ $\mathbb{E}[X]=0$
 $$\begin{flalign}\mathbb{E}[X^{2}]&=\int_{-\infty}^{+\infty}x^{2}f(x)\,dx=\int_{-1}^{0}x^{3}+x^{2}\,dx+\int_{0}^{1}-x^{3}+x^{2}\,dx\\
 &=\left[ \frac{x^{4}}{4}+\frac{x^{3}}{3} \right]_{-1}^{0}+\left[ -\frac{x^{4}}{4}+\frac{x^{3}}{3} \right]_{0}^{1}=\frac{1}{6}
 &&\end{flalign}$$
-$\mathrm{Var}[X]=\frac{1}{6}=0.1667$
+$\mathrm{Var}[X]=\frac{1}{6}=0.167$
 ```desmos-graph
 left=-2.5; right=2.5; top=1.5; bottom=-0.5;
 width=600; height=300;
@@ -130,18 +130,18 @@ y=-x+1|0<=x<=1|blue
 <div class="page-break" style="page-break-before: always;"></div>
 
 $$\begin{flalign}f(y)=\begin{cases}
--\frac{2}{3}|x|+1,&-\frac{3}{2}\leq x\leq \frac{3}{2} \\
+-\frac{4}{9}|x|+\frac{2}{3},&-\frac{3}{2}\leq x\leq \frac{3}{2} \\
 0,&\text{elsewhere}
 \end{cases} &&\end{flalign}$$
 $\mathbb{E}[Y]=0$
-$$\begin{flalign}\mathbb{E}[Y^{2}]&=\int_{-\infty}^{+\infty}y^{2}f(y)\,dy=\int_{-\frac{3}{2}}^{0} \frac{2}{3}y^{3} +y^{2}\,dy+\int_{0}^{\frac{3}{2}} -\frac{2}{3}y^{3}+y^{2}\,dy\\
-&=\left[ \frac{x^{4}}{6}+\frac{x^{3}}{3} \right]_{-\frac{3}{2}}^{0}+\left[ -\frac{x^{4}}{6}+\frac{x^{3}}{3} \right]_{0}^{\frac{3}{2}}=\frac{9}{16}
+$$\begin{flalign}\mathbb{E}[Y^{2}]&=\int_{-\infty}^{+\infty}y^{2}f(y)\,dy=\int_{-\frac{3}{2}}^{0} \frac{4}{9}y^{3} +\frac{2}{3}y^{2}\,dy+\int_{0}^{\frac{3}{2}} -\frac{4}{9}y^{3}+\frac{2}{3}y^{2}\,dy\\
+&=\left[ \frac{y^{4}}{9}+\frac{2}{9}y^{3} \right]_{-\frac{3}{2}}^{0}+\left[ -\frac{y^{4}}{9}+\frac{2}{9}y^{3} \right]_{0}^{\frac{3}{2}}=\frac{3}{8}
 &&\end{flalign}$$
-$\mathrm{Var}[Y]=\frac{9}{16}=0.5625$
+$\mathrm{Var}[Y]=\frac{3}{8}=0.375$
 ```desmos-graph
 left=-2.5; right=2.5; top=1.5; bottom=-0.5;
 width=600; height=300;
 ---
-y=(2/3)x+1|-(3/2)<=x<=0|green
-y=-(2/3)x+1|0<=x<=(3/2)|green
+y=(4/9)x+(2/3)|-(3/2)<=x<=0|green
+y=-(4/9)x+(2/3)|0<=x<=(3/2)|green
 ```
