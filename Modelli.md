@@ -235,4 +235,74 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > Se $n\in N$, da prima, $\Gamma(n)=(n-1)!$
 > Se invece $\alpha \in \mathbb{R}$
 > $$\begin{flalign}\Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\cdot e^{-x}\,dx &&\end{flalign}$$
+> > [!esempio]-
+> > Alcuni valori noti: $\Gamma(\alpha+1)=\alpha \cdot\Gamma(\alpha)$, $\Gamma(1)=1$, $\Gamma\left( \frac{1}{2} \right)=\sqrt{\pi}$
+
+# Variabile aleatoria gaussiana
+> [!definizione]
+> Anche chiamata **normale**, modello di interpretazione di errori o scostamenti
+> Lo scostamento $X-\mu$, con $\mu$ valore vero, accompagna le misure sperimentali di un certo valore $X$ effettuate nelle stesse condizioni
+> $$\begin{flalign}U=\frac{X-\mu}{\sigma} &&\end{flalign}$$
+> sono gli errori di misura come multipli della loro ampiezza tipica, $\sigma=\sqrt{\mathrm{Var}[X]}$
+> $U\sim \mathrm{N}(0,1)$ è variabile normale standard con media $0$ e deviazione $1$, senza errori sistematici
+> $$\begin{flalign}f_{U}(u)=\frac{1}{\sqrt{2\pi}}e^{-u^{2}/2} &&\end{flalign}$$
+> > [!dimostrazione]-
+> >  Se le misure non sono affette da errori sistematici:
+> > - $\mathbb{E}[U]=0$
+> > - $f_{U}(u)=f_{U}(-u)$ e $\lim_{ u \to +\infty }f_{U}(u)=\lim_{ u \to -\infty }f_{U}(u)=0$
+> > - $f_{U}(0)>f_{U}(u)\;\;\forall u\in \mathbb{R}\setminus \{ 0 \}$
+> > 
+> > Ovvero:
+> > $$\begin{flalign} \frac{df_{U}(u)}{du}=-f_{U}(u)\cdot u &&\end{flalign}$$
+> > e $f_{U}(u)>0\;\;\forall u\in \mathbb{R}$
+> > Una soluzione all'equazione differenziale è $e^{-u^{2}/2}$
+> > $f_{U}(u)=k\cdot e^{-u^{2}/2}$, per essere densità
+> > $$\begin{flalign}1&=\int_{-\infty}^{+\infty}k\cdot e^{-u^{2}/2}\,du=2k\int_{0}^{+\infty}e^{-u^{2}/2}\,du\\
+> > &\;\;\;t=\frac{u^{2}}{2}\;\;\;u=\sqrt{2t}\;\;\;du=\frac{1}{\sqrt{2}}t^{(1/2)-1}\\
+> > &=\frac{2}{\sqrt{2}}k\int_{0}^{+\infty}t^{(1/2)-1}\cdot e^{-t}\,dt=\frac{2}{\sqrt{2}}k\cdot\Gamma\left( \frac{1}{2} \right)=\frac{2\sqrt{\pi}}{\sqrt{2}}k\implies k=\frac{1}{\sqrt{2\pi}}&&\end{flalign}$$
 > 
+> $X=\mu+\sigma U\sim \mathrm{N}(\mu,\sigma^{2})$ è variabile aleatoria normale (non standard)
+> $$\begin{flalign}f_{X}(x)=\frac{1}{\sqrt{2\pi}}e^{-(1/2)((X-\mu)/\sigma)}\left| \frac{du}{dx}\right|=\frac{1}{\sigma \sqrt{2\pi}}e^{-(1/2)((x-\mu)/\sigma)^{2}} &&\end{flalign}$$
+> con $\sigma>0$
+
+> [!formule]
+> $\Phi_{U}(t)=e^{t^{2}/2}$
+> 
+> $\Phi_{X}(t)=e^{t\mu+t^{2}\sigma^{2}/2}$
+> 
+> $\mathbb{E}[X]=\mu$
+> > [!dimostrazione]-
+> > ${\dots}=\mathbb{E}[\mu+\sigma U]=\mu+\sigma\mathbb{E}[U]={\dots}$
+> 
+> $\mathrm{Var}[X]=\sigma^{2}$
+
+> [!approfondimento]-
+> $X_{1},X_{2}\sim \mathrm{N}(0,1)$, $X_{1}\perp \!\!\! \perp X_{2}$, $Y=X_{1}+X_{2}$
+> $$\begin{flalign}\Phi_{Y}(t)=\Phi_{X_{1}}(t)\cdot \Phi_{X_{2}}(t)=e^{t^{2}/2}\cdot e^{t^{2}/2}=e^{2t^{2}2} &&\end{flalign}$$
+> Quindi $Y\sim \mathrm{N}(0,2)$
+> 
+> $X_{i}\sim \mathrm{N}(\mu_{i},\sigma_{i}^{2})$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$, $a_{i}\in \mathbb{R}$ ($i,j=1,\dots,n$)
+> $Y=\sum_{i=1}^{n}a_{i}X_{i}$
+> $\mathbb{E}[Y]=\sum_{i=1}^{n}a_{i}\mu_{i}=\bar{\mu}$
+> $\mathrm{Var}[X]=\sum_{i=1}^{n}(a_{i}\sigma_{i})^{2}=\bar{\sigma}^{2}$
+> $$\begin{flalign}\Phi_{Y}(t)=\prod_{i=1}^{n}\Phi_{X_{i}}(t)=e^{t\bar{\mu}+t^{2}\bar{\sigma}^{2}/2} &&\end{flalign}$$
+> Quindi $Y\sim \mathrm{N}(\bar{\mu},\bar{\sigma}^{2})$
+> 
+> $X_{i}\sim \mathrm{N}(\mu_{i},\sigma_{i}^{2})$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$, $a_{i},b_{i}\in \mathbb{R}$ ($i,j=1,\dots,n$)
+> $Y=\sum_{i=1}^{n}a_{i}X_{i}$, $Z=\sum_{i=1}^{n}b_{i}X_{i}$
+> $\mathrm{Cov}(Y,Z)=\mathbb{E}[(Y-\mathbb{E}[Y])(Z-\mathbb{E}[Z])]=\sum_{i=1}^{n}a_{i}b_{i}\sigma_{i}^{2}$
+> Se $\sigma_{i}=\sigma\;\;\forall i\in \{ 1,\dots,n \}$
+> $\mathrm{Cov}(Y,Z)=0\iff \sum_{i=1}^{n}a_{i}b_{i}=0$, $Y$ e $Z$ sono dette ortogonali
+
+# Variabile aleatoria normale bivariata
+> [!definizione]
+> $X\sim \mathrm{N}(\mu_{1},\sigma_{1}^{2})$, $Y\sim \mathrm{N}(\mu_{2},\sigma_{2}^{2})$, $X\perp \!\!\! \perp Y$, per semplicità $\mu_{1}=\mu_{2}=0$
+> Allora si può definire
+> $$\begin{flalign}f(x,y)=\frac{1}{2\pi\sigma_{1}\sigma_{2}}e^{-(1/2)(x^{2}/\sigma_{1}^{2}+y^{2}/\sigma_{2^{2}})} &&\end{flalign}$$
+> > [!dimostrazione]-
+> > $$\begin{flalign}{\dots}=f_{X}(x)\cdot f_{Y}(y)=\frac{1}{\sqrt{2\pi\sigma_{1}^{2}}}e^{-(1/2)(x^{2}/\sigma_{1}^{2})}\cdot\frac{1}{\sqrt{2\pi\sigma_{2}^{2}}}e^{-(1/2)(y^{2}/\sigma_{2}^{2})}={\dots} &&\end{flalign}$$
+> 
+> $X_{i}\sim \mathrm{N}(0,1)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$ ($i,j=1,\dots,n$)
+> Allora
+> $$\begin{flalign}f(x_{1},\dots,x_{n})=\frac{1}{(\sqrt{2\pi})^{n}}e^{-(1/2)(x_{1}^{2}+\dots+x_{n}^{2})} &&\end{flalign}$$
+> Il vettore $(X_{1},\dots,X_{n})$ si dice gaussiana multivariata standard
