@@ -5,20 +5,25 @@
 > $$\begin{flalign}P_{X}(x)=\begin{cases}
 p,\;&x=1 \\
 1-p=q, &x=0
-\end{cases}\;\;\;p \in(0,1) &&\end{flalign}$$
+\end{cases} &&\end{flalign}$$
+> con $p \in(0,1)$
 
 > [!formule]
 > $\Phi_{X}(t)=q+e^{t}p$
 > > [!dimostrazione]-
-> > ${\dots}=\mathbb{E}[e^{tX}]=\sum_{t=0}^{1}e^{t\cdot i}\cdot P_{X}(i)=e^{0t}(1-p)+e^{1t}p={\dots}$
+> > ${\dots}=\mathbb{E}[e^{tX}]=\sum_{i=0}^{1}e^{t\cdot i}\cdot P_{X}(x_{i})=\sum_{i=0}^{1}e^{t\cdot i}\cdot P_{X}(i)=e^{0t}(1-p)+e^{1t}p={\dots}$
 > 
 > $$\begin{flalign}\mathbb{E}[X]=p &&\end{flalign}$$
 > > [!dimostrazione]-
 > > ${\dots}=\frac{d\Phi_{X}(t)}{dt}\bigg\rvert_{t=0}=e^{t}p\big\rvert_{t=0}={\dots}$
+> > oppure
+> > $\dots=\sum_{i=0}^1x_{i}\cdot P_{X}(x_{i})=\sum_{i=0}^1i\cdot P_{X}(i)=0\cdot q+1\cdot p=\dots$
 > 
 > $$\begin{flalign}\mathbb{E}[X^{2}]=p &&\end{flalign}$$
 > > [!dimostrazione]-
-> > ${\dots}=\frac{d^{2}\Phi_{X}(t)}{dt^{2}}\bigg\rvert_{t=0}=e^{t}p\big\rvert_{t=0}={\dots}$
+> > ${\dots}=\frac{d^{2}\Phi_{X}(t)}{dt^{2}}\bigg\rvert_{t=0}=\frac{d}{dt}e^{t}p\big\rvert_{t=0}=e^{t}p\big\rvert_{t=0}={\dots}$
+> > oppure
+> > $\dots=\sum_{i=0}^1x^2_{i}\cdot P_{X}(x_{i})=\sum_{i=0}^1i^2\cdot P_{X}(i)=0^2\cdot q+1^2\cdot p=\dots$
 > 
 > $\mathrm{Var}(X)=p(1-p)=p\cdot q$
 > > [!dimostrazione]-
@@ -29,7 +34,7 @@ p,\;&x=1 \\
 > [!definizione]
 > Esperimenti ripetuti e indipendenti con due possibili esiti con probabilità $p$ e $1-p$
 > Abbinando $1$ al successo e $0$ all'insuccesso, ripetendo $n$ volte l'esperimento, la variabile che conta il numero di successi è detta binomiale ed è la somma di $n$ variabili aleatorie Bernoulliane stocasticamente indipendenti
-> $X_{1},\dots,X_{n}\sim \mathrm{B}(p)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;x\neq j$
+> $X_{1},\dots,X_{n}\sim \mathrm{B}(p)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$
 > $Y=\sum_{i=1}^{n}X_{i}\sim \mathrm{Bin}(n,p)$
 > $$\begin{flalign}P_{Y}(y)=\binom{n}{y}(p)^{y}(1-p)^{n-y}\;\;y\in \{ 0,\dots,n \} &&\end{flalign}$$
 
@@ -200,8 +205,34 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $$\begin{flalign}\mathbb{E}[X]=\frac{d\Phi_{X}(t)}{dt}\bigg\rvert_{y=0}=\frac{1}{\lambda} &&\end{flalign}$$
 > $$\begin{flalign}\mathrm{Var}[X]=\frac{1}{\lambda^{2}} &&\end{flalign}$$
 
-> [!approfondimento]
+> [!approfondimento]-
 > Vige della proprietà di assenza di memoria, dati $x_{2}>x_{1}$, $x_{2}=x_{1}+x$ ($x>0$)
 > $$\begin{flalign}\mathbb{P}(X>x_{2}|X>x_{1})&=\frac{\mathbb{P}((X>x_{2})\cap(X>x_{1}))}{\mathbb{P}(X>x_{1})}=\frac{\mathbb{P}(X>x_{2})}{\mathbb{P}(X>x_{1})}=\frac{1-F_{X}(x_{2})}{1-F_{X}(x_{1})}\\
 &=\frac{e^{-\lambda(x_{1}+x)}}{e^{-\lambda x_{1}}}=\frac{e^{-\lambda x_{1}}\cdot e^{-\lambda x}}{e^{-\lambda x_{1}}}=e^{-\lambda x}=\mathbb{P}(X>x)
 &&\end{flalign}$$
+
+# Variabile aleatoria gamma
+> [!definizione]
+> $X_{i}\sim \mathrm{Exp}(\lambda)$, $i=1,\dots,n$
+> $X_{n}=\sum_{i=1}^{n}X_{i}\sim \mathrm{Gamma}(n,\lambda)$ può essere pensato come periodo complessivo di funzionamento avendo a disposizione $n$ elementi, utilizzati uno dopo l'altro appena si verifica il guasto del precedente
+> $Y$ conta il numero di elementi rotti (quindi di guasti), la probabilità che il periodo di funzionamento sia $>x$ è
+> $$\begin{flalign}\mathbb{P}(X>x)=1-F(x)=\sum_{y=0}^{n-1} \frac{(\lambda x)^{y}}{y!}e^{-\lambda x}=\mathbb{P}(Y<n) &&\end{flalign}$$
+> ovvero la probabilità che si verifichino $n-1$ guasti
+
+> [!formule]
+> $$\begin{flalign}F_{X_{n}}(x)=\sum_{y=n}^{+\infty} \frac{(\lambda x)^{y}}{y!}\cdot e^{-\lambda x} &&\end{flalign}$$
+> $$\begin{flalign}f_{X_{n}}(x)=\lambda e^{-\lambda x}\cdot \frac{(\lambda x)^{n-1}}{(n-1)!} &&\end{flalign}$$
+> > [!dimostrazione]-
+> > $$\begin{flalign}{\dots}&=\frac{dF_{X_{n}}(x)}{dx}=\sum_{y=n}^{+\infty} \frac{\lambda(\lambda x)^{y-1}}{(y-1)!}\cdot e^{-\lambda x} - \sum_{y=n}^{+\infty} \frac{\lambda(\lambda x)^{y}}{(y)!}\cdot e^{-\lambda x}\\
+> > &=\lambda e^{-\lambda x}\left[ \sum_{z=n-1}^{+\infty} \frac{(\lambda x)^{z}}{z!}-\sum_{y=n}^{+\infty} \frac{(\lambda x)^{y}}{y!} \right]={\dots} &&\end{flalign}$$
+> 
+> $$\begin{flalign}\Phi_{X_{n}}(t)=\left( \frac{\lambda}{\lambda-t} \right)^{n} &&\end{flalign}$$
+> con $t<\lambda$
+
+> [!definizione]
+> Si definisce una funzione gamma anche per $n$ non interi tale che
+> $$\begin{flalign}f_{X_{n}}(x)=\lambda e^{-\lambda x}\cdot \frac{(\lambda x)^{n-1}}{\Gamma(n)} &&\end{flalign}$$
+> Se $n\in N$, da prima, $\Gamma(n)=(n-1)!$
+> Se invece $\alpha \in \mathbb{R}$
+> $$\begin{flalign}\Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\cdot e^{-x}\,dx &&\end{flalign}$$
+> 
