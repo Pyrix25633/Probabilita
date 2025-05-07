@@ -210,6 +210,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $$\begin{flalign}\mathbb{P}(X>x_{2}|X>x_{1})&=\frac{\mathbb{P}((X>x_{2})\cap(X>x_{1}))}{\mathbb{P}(X>x_{1})}=\frac{\mathbb{P}(X>x_{2})}{\mathbb{P}(X>x_{1})}=\frac{1-F_{X}(x_{2})}{1-F_{X}(x_{1})}\\
 &=\frac{e^{-\lambda(x_{1}+x)}}{e^{-\lambda x_{1}}}=\frac{e^{-\lambda x_{1}}\cdot e^{-\lambda x}}{e^{-\lambda x_{1}}}=e^{-\lambda x}=\mathbb{P}(X>x)
 &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria gamma
 > [!definizione]
@@ -235,6 +236,8 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > Se $n\in N$, da prima, $\Gamma(n)=(n-1)!$
 > Se invece $\alpha \in \mathbb{R}$
 > $$\begin{flalign}\Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\cdot e^{-x}\,dx &&\end{flalign}$$
+> <div class="page-break" style="page-break-before: always;"></div>
+> 
 > > [!esempio]-
 > > Alcuni valori noti: $\Gamma(\alpha+1)=\alpha \cdot\Gamma(\alpha)$, $\Gamma(1)=1$, $\Gamma\left( \frac{1}{2} \right)=\sqrt{\pi}$
 
@@ -260,6 +263,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > > $$\begin{flalign}1&=\int_{-\infty}^{+\infty}k\cdot e^{-u^{2}/2}\,du=2k\int_{0}^{+\infty}e^{-u^{2}/2}\,du\\
 > > &\;\;\;t=\frac{u^{2}}{2}\;\;\;u=\sqrt{2t}\;\;\;du=\frac{1}{\sqrt{2}}t^{(1/2)-1}\\
 > > &=\frac{2}{\sqrt{2}}k\int_{0}^{+\infty}t^{(1/2)-1}\cdot e^{-t}\,dt=\frac{2}{\sqrt{2}}k\cdot\Gamma\left( \frac{1}{2} \right)=\frac{2\sqrt{\pi}}{\sqrt{2}}k\implies k=\frac{1}{\sqrt{2\pi}}&&\end{flalign}$$
+> <div class="page-break" style="page-break-before: always;"></div>
 > 
 > $X=\mu+\sigma U\sim \mathrm{N}(\mu,\sigma^{2})$ è variabile aleatoria normale (non standard)
 > $$\begin{flalign}f_{X}(x)=\frac{1}{\sqrt{2\pi}}e^{-(1/2)((X-\mu)/\sigma)}\left| \frac{du}{dx}\right|=\frac{1}{\sigma \sqrt{2\pi}}e^{-(1/2)((x-\mu)/\sigma)^{2}} &&\end{flalign}$$
@@ -293,6 +297,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $\mathrm{Cov}(Y,Z)=\mathbb{E}[(Y-\mathbb{E}[Y])(Z-\mathbb{E}[Z])]=\sum_{i=1}^{n}a_{i}b_{i}\sigma_{i}^{2}$
 > Se $\sigma_{i}=\sigma\;\;\forall i\in \{ 1,\dots,n \}$
 > $\mathrm{Cov}(Y,Z)=0\iff \sum_{i=1}^{n}a_{i}b_{i}=0$, $Y$ e $Z$ sono dette ortogonali
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria normale bivariata
 > [!definizione]
