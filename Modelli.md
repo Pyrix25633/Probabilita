@@ -54,6 +54,8 @@ p,\;&x=1 \\
 > $Z\sim \mathrm{Bin}(n_{1}+n_{2},p)$
 > $\Phi_{Z}(t)=\mathbb{E}[e^{tZ}]=\mathbb{E}[e^{tY_{1}+tY_{2}}]=\mathbb{E}[e^{tY_{1}}e^{tY_{2}}]=\mathbb{E}[e^{tY_{1}}]\cdot \mathbb{E}[e^{tY_{2}}]$$=(e^{t}p+q)^{n_{1}}(e^{t}p+q)=(e^{t}p+q)^{n_{1}+n_{2}}$
 
+> [!esempio]-
+> ![Variabile aleatoria binomiale](Esempi.md#Variabile%20aleatoria%20binomiale)
 <div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria geometrica
@@ -68,6 +70,9 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $$\begin{flalign}\Phi_{X}(t)=\frac{1-p}{1-e^{t}p} &&\end{flalign}$$
 > $$\begin{flalign}\mathbb{E}[X]=\frac{d\Phi_{X}(t)}{dt}\bigg\rvert_{t=0}=\frac{p}{1-p} &&\end{flalign}$$
 > è il numero medio di successi prima di un insuccesso
+
+> [!esempio]-
+> ![Variabile aleatoria geometrica](Esempi.md#Variabile%20aleatoria%20geometrica)
 
 # Variabile aleatoria di Poisson
 > [!definizione]
@@ -92,6 +97,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $\Phi_{Z}(t)=e^{\mu\cdot(e^{t}-1)}$
 > > [!dimostrazione]-
 > > $$\begin{flalign}{\dots}=\mathbb{E}[e^{tZ}]=\sum_{z=0}^{+\infty}e^{tz}\cdot \frac{\mu^{z}}{z!}\cdot e^{-\mu}=e^{-\mu}\sum_{z=0}^{+\infty} \frac{(e^{t}\mu)^{z}}{z!}=e^{-\mu}e^{e^{t}\mu}={\dots} &&\end{flalign}$$
+> 
 > Si può notare che la media è uguale a quella del $\mathrm{Bin}$
 > $\mathbb{E}[Z]=\mu=n\cdot p$
 > > [!dimostrazione]-
@@ -106,6 +112,9 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > Inoltre è riproducibile
 > $Z_{1}\sim \mathrm{Pois(\mu_{1})}\perp \!\!\! \perp Z_{2}\sim \mathrm{Pois(\mu_{2})}$, $Z=Z_{1}+Z_{2}$
 > $\Phi_{Z}(t)=\Phi_{Z_{1}}(t)\cdot \Phi_{Z_{2}}(t)=e^{\mu_{1}\cdot(e^{t}-1)}\cdot e^{\mu_{2}\cdot(e^{t-1})}=e^{(\mu_{1}+\mu_{2})(e^{t}-1)}\implies Z\sim \mathrm{Pois(\mu_{1}+\mu_{2})}$
+
+> [!esempio]-
+> ![Variabile aleatoria di Poisson](Esempi.md#Variabile%20aleatoria%20di%20Poisson)
 <div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria ipergeometrica
@@ -126,6 +135,9 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 
 > [!formule]
 > $$\begin{flalign}\mathbb{E}[K]=n\cdot \frac{D}{N} &&\end{flalign}$$
+
+> [!esempio]-
+> ![Variabile aleatoria ipergeometrica](Esempi.md#Variabile%20aleatoria%20ipergeometrica)
 
 # Variabile aleatoria di Pascal
 > [!definizione]

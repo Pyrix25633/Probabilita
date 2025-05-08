@@ -145,3 +145,24 @@ width=600; height=300;
 y=(4/9)x+(2/3)|-(3/2)<=x<=0|green
 y=-(4/9)x+(2/3)|0<=x<=(3/2)|green
 ```
+
+# Variabile aleatoria binomiale
+$Y\sim \mathrm{Bin}\left( 20, \frac{1}{3} \right)$ conta il numero di teste su $20$ lanci
+La probabilità che esca testa esattamente $3$ volte è $P_{Y}(3)\approx0.0429$
+La probabilità che esca testa tra $4$ e $6$ volte è $\sum_{y=4}^{6}P_{Y}(y)\approx0.4189$
+
+# Variabile aleatoria geometrica
+$X\sim \mathrm{Geo(0.15)}$ conta il numero di lanci prima che un razzo esploda
+La probabilità che il razzo esploda al secondo lancio è $P_{X}(2)\approx0.0191$
+La probabilità che esploda prima del quarto lancio è $\sum_{x=1}^{3}P_{X}(x)\approx0.3254$
+
+# Variabile aleatoria di Poisson
+$Z\sim \mathrm{Pois}(5)$ conta il numero di pizze prodotte in un'ora
+La media di pizze per ora è esattamente $5$
+La probabilità che siano state prodotte $6$ pizze è $P_{Z}(6)\approx0.1462$
+La probabilità che siano state prodotte tra $3$ e $8$ pizze è $\sum_{z=3}^{8}P_{Z}(z)\approx0.8073$
+
+# Variabile aleatoria ipergeometrica
+$K\sim \mathrm{Iper}(120,7,35)$ conta i pezzi difettosi estratti su un campione di $7$ da un totale di $120$ di cui $35$ difettosi
+La probabilità di estrarre $5$ pezzi difettosi è $P_{K}(5)\approx0.0195$
+La probabilità di estrarre tra $4$ e $7$ pezzi difettosi è $\sum_{k=4}^{7}P_{K}(k)\approx0.1089$
