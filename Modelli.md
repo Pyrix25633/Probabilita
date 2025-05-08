@@ -307,7 +307,47 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > > [!dimostrazione]-
 > > $$\begin{flalign}{\dots}=f_{X}(x)\cdot f_{Y}(y)=\frac{1}{\sqrt{2\pi\sigma_{1}^{2}}}e^{-(1/2)(x^{2}/\sigma_{1}^{2})}\cdot\frac{1}{\sqrt{2\pi\sigma_{2}^{2}}}e^{-(1/2)(y^{2}/\sigma_{2}^{2})}={\dots} &&\end{flalign}$$
 > 
+> $(X,Y)$ si dice normale bivariata
+> 
 > $X_{i}\sim \mathrm{N}(0,1)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$ ($i,j=1,\dots,n$)
 > Allora
 > $$\begin{flalign}f(x_{1},\dots,x_{n})=\frac{1}{(\sqrt{2\pi})^{n}}e^{-(1/2)(x_{1}^{2}+\dots+x_{n}^{2})} &&\end{flalign}$$
 > Il vettore $(X_{1},\dots,X_{n})$ si dice gaussiana multivariata standard
+<div class="page-break" style="page-break-before: always;"></div>
+
+# Teorema centrale del limite
+> [!teorema]
+> $X_{i}$ variabile aleatoria, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$, tutte seguenti la stessa distribuzione con media $\mu$ e varianza $\sigma^{2}$ ($i,j=1,\dots,n$)
+> $Y=\sum_{i=1}^{n}X_{i}$ converge in distribuzione a $\mathrm{N}(n\mu,n\sigma^{2})$
+> > [!dimostrazione]-
+> > Si dice che una successione $\{X_{n}\}_{n\in \mathbb{N}}$ di variabili aleatorie converge in distribuzione a $X$ se $\lim_{ n \to +\infty }F_{X_{n}}(x)=F_{X}(x)\;\;\forall x$ in cui $F_{X}(x)$ è continua
+> > $$\begin{flalign}Y_{i}=\frac{X_{i}-\mu}{\sigma} &&\end{flalign}$$
+> > $$\begin{flalign}Z=\frac{\left( \sum_{i=1}^{n}X_{i} \right) -n\mu}{\sqrt{n}\sigma}=\sum_{i=1}^{n} \frac{X_{i}-\mu}{\sqrt{n}\sigma}=\frac{1}{\sqrt{n}}\sum_{i=1}^{n}Y_{i}\sim \mathrm{N}(0,1)  &&\end{flalign}$$
+> > $$\begin{flalign}\Phi_{Z}(t)&=\mathbb{E}[e^{tZ}]=\mathbb{E}\left[ e^{t\left( \frac{1}{\sqrt{n}}\sum_{i=1}^{n}Y_{i} \right)} \right]=\mathbb{E}\left[ \prod_{i=1}^{n}e^{\frac{t}{\sqrt{n}}Y_{i}} \right]=\prod_{i=1}^{n}\mathbb{E}\left[e^{\frac{t}{\sqrt{n}}Y_{i}}\right]\\
+> > &=\prod_{i=1}^{n}\mathbb{E}\left[ 1+\frac{t}{\sqrt{n}}Y_{i}+\left( \frac{t}{\sqrt{n}} \right)^{2}\cdot \frac{Y_{i}^{2}}{2!}+\dots \right]\\
+> > &=\prod_{i=1}^{n}\left[ \mathbb{E}[1]+\frac{t}{\sqrt{n}}\mathbb{E}[Y_{i}]+\left( \frac{t}{\sqrt{n}} \right)^{2}\cdot \frac{\mathbb{E}[Y_{i}^{2}]}{2!}+\dots \right]\\
+> > &\;\;\;\mathbb{E}[1]=1\;\;\;\mathbb{E}[Y_{i}]=\frac{\mathbb{E}[X_{i}]-\mu}{\sigma}=\frac{\mu-\mu}{\sigma}=0\;\;\;\mathbb{E}[Y_{i}^{2}]=1\\
+> > &=\prod_{i=1}^{n}\left[ 1+0+\frac{1}{n}\left( \frac{t^{2}}{2!}+\frac{t^{3}}{\sqrt{n}}\cdot \frac{\mathbb{E}[Y_{i}^{3}]}{3!}+\dots \right) \right]&&\end{flalign}$$
+> > $\mathbb{E}[Y_{i}]=\mathbb{E}[Y_{j}]\;\;\forall i,j=1,\dots,n$ poiché hanno la stessa distribuzione
+> > $$\begin{flalign}{\dots}=\left[ 1+\frac{1}{n}\left( \frac{t^{2}}{2!}+\frac{t^{3}}{\sqrt{n}}\cdot \frac{\mathbb{E}[Y_{i}^{3}]}{3!}+\dots \right) \right]^{n} &&\end{flalign}$$
+> > $$\begin{flalign}\lim_{ n \to +\infty } \frac{n}{f(n)}=\pm \infty\implies \lim_{ n \to +\infty }\left[ 1+\frac{f(n)}{n} \right]^{n}=e^{\lim_{ n \to +\infty }f(n) }  &&\end{flalign}$$
+> > $$\begin{flalign}n\to +\infty\implies{\dots}=e^{\lim_{ n \to +\infty } \left( \frac{t^{2}}{2!}+\frac{t^{3}}{\sqrt{n}}\cdot \frac{\mathbb{E}[Y_{i}^{3}]}{3!}+\dots \right) }=e^{t^{2}/2} &&\end{flalign}$$
+> > Ovvero è la funzione di generazione dei momenti della gaussiana standard
+> > $Y=Z\sqrt{n}\sigma+n\mu\implies{\dots}$
+<div class="page-break" style="page-break-before: always;"></div>
+
+# Approssimazione normale della distribuzione binomiale
+> [!teorema] Teorema di De Moivre-Laplace
+> Una variabile aleatoria $\mathrm{Bin}(n,p)$ per $n$ grandi ha approssimativamente la stessa distribuzione di una $\mathrm{N}(np,np(1-p))$
+> 
+> $X_{i}\sim \mathrm{Bin}(n,p)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$
+> $S_{n}=\sum_{i=1}^{n}X_{i}$ è il numero di successi
+> Se $n\to +\infty$
+> $$\begin{flalign} \frac{S_{n}-np}{\sqrt{np(1-p)}}\sim \mathrm{N}(0,1) &&\end{flalign}$$
+> $U\sim \mathrm{N}(0,1)$
+> Se $a<b$ e $np(1-p)>10$
+> $$\begin{flalign}\lim_{ n \to \infty }\mathbb{P}\left( a\leq \frac{S_{n}-np}{\sqrt{np(1-p)}}\leq b \right)=F_{U}(b)-F_{U}(a)  &&\end{flalign}$$
+> è una buona approssimazione
+
+> [!approfondimento]- Correzione di continuità
+> Nell'approssimazione di una variabile aleatoria discreta con una continua per $t$ si considera l'intervallo $t-\frac{1}{2}\leq y\leq t+\frac{1}{2}$
