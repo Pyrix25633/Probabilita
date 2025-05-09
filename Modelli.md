@@ -141,21 +141,24 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 
 # Variabile aleatoria di Pascal
 > [!definizione]
-> Anche chiamata negativa binomiale
+> Anche chiamata **negativa binomiale**
 > $Y\sim \mathrm{NegBin}(m,p)$
-> Conta il numero di insuccessi $y$ prima di $m$ successi, quindi per definizione l'ultimo è un successo
+> Conta il numero di insuccessi $y$ prima di $m$ successi, quindi per definizione l'ultimo è un successo, $p$ è la probabilità di successo
 > $$\begin{flalign}P_{Y}(y)=\binom{y+m-1}{y}\cdot p^{m}\cdot(1-p)^{y} &&\end{flalign}$$
-> Si può anche scrivere come somma di $y$ geometriche indipendenti $X_{i}\sim \mathrm{Geo(p)}$ con $p$ identica
+> Si può anche scrivere come somma di $m$ geometriche $X_{i}\sim \mathrm{Geo}(1-p)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$, che contano gli insuccessi
 <div class="page-break" style="page-break-before: always;"></div>
 
 > [!formule]
-> $$\begin{flalign}\Phi_{Y}(t)=\frac{(1-p)^{y}}{(1-e^{t}p)^{y}} &&\end{flalign}$$
+> $$\begin{flalign}\Phi_{Y}(t)=\frac{(1-p)^{m}}{(1-e^{t}p)^{m}} &&\end{flalign}$$
 > > [!dimostrazione]-
 > > $$\begin{flalign}{\dots}=\mathbb{E}[e^{tY}]=\mathbb{E}\left[ e^{t\sum_{i=1}^{y}X_{i}} \right]=\prod_{i=1}^{y}\mathbb{E}[e^{tX_{i}}]={\dots} &&\end{flalign}$$
 > 
-> $$\begin{flalign}\mathbb{E}[Y]=\frac{yp}{1-p} &&\end{flalign}$$
+> $$\begin{flalign}\mathbb{E}[Y]=\frac{m(1-p)}{p} &&\end{flalign}$$
 > > [!dimostrazione]-
-> > $$\begin{flalign}{\dots}=\mathbb{E}\left[ \sum_{i=1}^{y}X_{i} \right]=\sum_{i=1}^{y}\mathbb{E}[X_{i}]={\dots} &&\end{flalign}$$
+> > $$\begin{flalign}{\dots}=\mathbb{E}\left[ \sum_{i=1}^{m}X_{i} \right]=\sum_{i=1}^{y}\mathbb{E}[X_{i}]={\dots} &&\end{flalign}$$
+
+> [!esempio]-
+> ![Variabile aleatoria di Pascal](Esempi.md#Variabile%20aleatoria%20di%20Pascal)
 
 ---
 # Variabile aleatoria uniforme
@@ -195,6 +198,9 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > > $$\begin{flalign}{\dots}=\mathrm{Var}[Y\cdot(b-a)+a]=(b-a)^{2}\cdot \mathrm{Var}[Y]={\dots} &&\end{flalign}$$
 <div class="page-break" style="page-break-before: always;"></div>
 
+> [!esempio]-
+> ![Variabile aleatoria uniforme](Esempi.md#Variabile%20aleatoria%20uniforme)
+
 # Variabile aleatoria esponenziale
 > [!definizione]
 > $\mu=\lambda x$, $Y\sim \mathrm{Pois}(\mu)$
@@ -224,6 +230,9 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 &&\end{flalign}$$
 <div class="page-break" style="page-break-before: always;"></div>
 
+> [!esempio]-
+> ![Variabile aleatoria esponenziale](Esempi.md#Variabile%20aleatoria%20esponenziale)
+
 # Variabile aleatoria gamma
 > [!definizione]
 > $X_{i}\sim \mathrm{Exp}(\lambda)$, $i=1,\dots,n$
@@ -252,6 +261,9 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > 
 > > [!esempio]-
 > > Alcuni valori noti: $\Gamma(\alpha+1)=\alpha \cdot\Gamma(\alpha)$, $\Gamma(1)=1$, $\Gamma\left( \frac{1}{2} \right)=\sqrt{\pi}$
+
+> [!esempio]-
+> ![Variabile aleatoria gamma](Esempi.md#Variabile%20aleatoria%20gamma)
 
 # Variabile aleatoria gaussiana
 > [!definizione]
@@ -310,6 +322,9 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > Se $\sigma_{i}=\sigma\;\;\forall i\in \{ 1,\dots,n \}$
 > $\mathrm{Cov}(Y,Z)=0\iff \sum_{i=1}^{n}a_{i}b_{i}=0$, $Y$ e $Z$ sono dette ortogonali
 <div class="page-break" style="page-break-before: always;"></div>
+
+> [!esempio]-
+> ![Variabile aleatoria gaussiana](Esempi.md#Variabile%20aleatoria%20gaussiana)
 
 # Variabile aleatoria normale bivariata
 > [!definizione]

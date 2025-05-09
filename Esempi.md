@@ -148,21 +148,50 @@ y=-(4/9)x+(2/3)|0<=x<=(3/2)|green
 
 # Variabile aleatoria binomiale
 $Y\sim \mathrm{Bin}\left( 20, \frac{1}{3} \right)$ conta il numero di teste su $20$ lanci
+La media di teste è $\mathbb{E}[Y]\approx6.667$
 La probabilità che esca testa esattamente $3$ volte è $P_{Y}(3)\approx0.0429$
 La probabilità che esca testa tra $4$ e $6$ volte è $\sum_{y=4}^{6}P_{Y}(y)\approx0.4189$
 
 # Variabile aleatoria geometrica
-$X\sim \mathrm{Geo(0.15)}$ conta il numero di lanci prima che un razzo esploda
-La probabilità che il razzo esploda al secondo lancio è $P_{X}(2)\approx0.0191$
-La probabilità che esploda prima del quarto lancio è $\sum_{x=1}^{3}P_{X}(x)\approx0.3254$
+$X\sim \mathrm{Geo(0.85)}$ conta il numero di lanci prima che un razzo esploda
+La media di lanci prima che il razzo esploda è $\mathbb{E}[X]\approx5.667$
+La probabilità che il razzo esploda al secondo lancio è $P_{X}(2)\approx0.1084$
+La probabilità che esploda prima del quarto lancio è $\sum_{x=1}^{3}P_{X}(x)\approx0.3280$
 
 # Variabile aleatoria di Poisson
 $Z\sim \mathrm{Pois}(5)$ conta il numero di pizze prodotte in un'ora
-La media di pizze per ora è esattamente $5$
+La media di pizze per ora è esattamente $\mathbb{E}[X]=5$
 La probabilità che siano state prodotte $6$ pizze è $P_{Z}(6)\approx0.1462$
 La probabilità che siano state prodotte tra $3$ e $8$ pizze è $\sum_{z=3}^{8}P_{Z}(z)\approx0.8073$
 
 # Variabile aleatoria ipergeometrica
 $K\sim \mathrm{Iper}(120,7,35)$ conta i pezzi difettosi estratti su un campione di $7$ da un totale di $120$ di cui $35$ difettosi
+La media di pezzi difettosi estratti è $\mathbb{E}[K]\approx2.042$
 La probabilità di estrarre $5$ pezzi difettosi è $P_{K}(5)\approx0.0195$
 La probabilità di estrarre tra $4$ e $7$ pezzi difettosi è $\sum_{k=4}^{7}P_{K}(k)\approx0.1089$
+
+# Variabile aleatoria di Pascal
+$Y\sim \mathrm{NegBin}(15,0.75)$ conta il numero di partite perse prima di riuscire a vincerne 15
+La media di partite perse è $\mathbb{E}[Y]=5$
+La probabilità di perdere $3$ partite è $P_{Y}(3)\approx0.1420$
+La probabilità di perdere tra $4$ e $7$ partite è $\sum_{y=4}^{7}P_{Y}(y)\approx0.5328$
+
+# Variabile aleatoria uniforme
+$X\sim \mathrm{Unif}(0,30)$ approssima la distribuzione di probabilità che l'autobus arrivi alla fermata tra le 10:00 e le 10:30
+La media di minuti di attesa è $\mathbb{E}[X]=15$
+La probabilità di aspettare più di $10$ minuti è $\int_{10}^{30}f_{X}(x)\,dx=0.75$
+
+# Variabile aleatoria esponenziale
+$X\sim \mathrm{Exp}\left( \frac{1}{50} \right)$ conta il tempo di funzionamento di una batteria di un'auto
+La media del tempo di vita prima della rottura è $\mathbb{E}[X]=50$ mila chilometri
+La probabilità che duri meno di $45$ mila chilometri è $\mathbb{P}(X\leq45)\approx0.5934$
+La probabilità che si rompa dopo più di $40$ mila chilometri è $\mathbb{P}(X>40)\approx0.4493$
+
+# Variabile aleatoria gamma
+$X\sim \mathrm{Gamma}\left(8, \frac{1}{50} \right)$ conta la strada percorsa da un'auto durante una gara avendo a disposizione $8$ pieni di carburante che si consumano ogni $50$ chilometri
+La probabilità che l'auto riesca a percorrere $250$ chilometri è $\mathbb{P}(X>250)\approx0.8666$
+
+# Variabile aleatoria gaussiana
+$X\sim \mathrm{N}(0.45,0.05^{2})$ conta i litri erogati da un distributore automatico con media $0.45$ e deviazione $0.05$
+$U\sim \mathrm{N}(0,1)$ normale standard dalla quale si ottengono i valori tabulati
+La probabilità che siano erogati più di $0.5$ litri è $\mathbb{P}(X>0.5)=1-\mathbb{P}(U\leq1)\approx0.1587$
