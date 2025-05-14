@@ -210,11 +210,13 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > La probabilità di non osservare guasti in $[0,x]$ è $\mathbb{P}(Y=0)=P_{Y}(0)=e^{-\lambda x}$, $x,\lambda>0$
 > Allo stesso modo non osservare guasti entro un tempo $x$ equivale al corretto funzionamento per tale tempo
 > $X\sim \mathrm{Exp}(\lambda)$ conta il tempo di funzionamento
-> $\mathbb{P}(X>x)=e^{-\lambda x}$ e $F_{X}(x)=\mathbb{P}(X\leq x)=1-e^{-\lambda x}$
 > $f_{X}(x)=\lambda\cdot e^{-\lambda x}$, $x>0$
 > Viene utilizzata per misurare attese, code, decadimenti e rotture improvvise
 
 > [!formule]
+> $\mathbb{P}(X>x)=e^{-\lambda x}$
+> 
+> $F_{X}(x)=\mathbb{P}(X\leq x)=1-e^{-\lambda x}$
 > $$\begin{flalign}\Phi_{X}(t)=\frac{\lambda}{\lambda-t} &&\end{flalign}$$
 > con $t<\lambda$
 > > [!dimostrazione]-
@@ -312,7 +314,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $X_{i}\sim \mathrm{N}(\mu_{i},\sigma_{i}^{2})$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$, $a_{i}\in \mathbb{R}$ ($i,j=1,\dots,n$)
 > $Y=\sum_{i=1}^{n}a_{i}X_{i}$
 > $\mathbb{E}[Y]=\sum_{i=1}^{n}a_{i}\mu_{i}=\bar{\mu}$
-> $\mathrm{Var}[X]=\sum_{i=1}^{n}(a_{i}\sigma_{i})^{2}=\bar{\sigma}^{2}$
+> $\mathrm{Var}[Y]=\sum_{i=1}^{n}a_{i}\sigma_{i}^{2}=\bar{\sigma}^{2}$
 > $$\begin{flalign}\Phi_{Y}(t)=\prod_{i=1}^{n}\Phi_{X_{i}}(t)=e^{t\bar{\mu}+t^{2}\bar{\sigma}^{2}/2} &&\end{flalign}$$
 > Quindi $Y\sim \mathrm{N}(\bar{\mu},\bar{\sigma}^{2})$
 > 
