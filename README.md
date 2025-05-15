@@ -9,9 +9,9 @@
 - [Modelli](Modelli.md)
 
 ### PDFs
-- [Notazione](Notazione.pdf)
-- [Teoremi base](Teoremi%20base.pdf)
-- [Calcolo combinatorio](Calcolo%20combinatorio.pdf)
-- [Variabili aleatorie](Variabili%20aleatorie.pdf)
-- [Vettori aleatori](Vettori%20aleatori.pdf)
-- [Modelli](Modelli.pdf)
+- [Notazione](pdf/Notazione.pdf)
+- [Teoremi base](pdf/Teoremi%20base.pdf)
+- [Calcolo combinatorio](pdf/Calcolo%20combinatorio.pdf)
+- [Variabili aleatorie](pdf/Variabili%20aleatorie.pdf)
+- [Vettori aleatori](pdf/Vettori%20aleatori.pdf)
+- [Modelli](pdf/Modelli.pdf)
