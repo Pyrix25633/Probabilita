@@ -53,10 +53,10 @@ p,\;&x=1 \\
 > $Y_{1}\sim \mathrm{Bin}(n_{1},p)$, $Y_{2}\sim \mathrm{Bin}(n_{2},p)$, $Y_{1}\perp \!\!\! \perp Y_{2}$, $Z=Y_{1}+Y_{2}$
 > $Z\sim \mathrm{Bin}(n_{1}+n_{2},p)$
 > $\Phi_{Z}(t)=\mathbb{E}[e^{tZ}]=\mathbb{E}[e^{tY_{1}+tY_{2}}]=\mathbb{E}[e^{tY_{1}}e^{tY_{2}}]=\mathbb{E}[e^{tY_{1}}]\cdot \mathbb{E}[e^{tY_{2}}]$$=(e^{t}p+q)^{n_{1}}(e^{t}p+q)=(e^{t}p+q)^{n_{1}+n_{2}}$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!esempio]-
 > ![Variabile aleatoria binomiale](Esempi.md#Variabile%20aleatoria%20binomiale)
-<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria geometrica
 > [!definizione]
@@ -64,7 +64,7 @@ p,\;&x=1 \\
 > Conta il numero di ripetizioni dell'esperimento fino al primo insuccesso
 > $X\sim \mathrm{Geo}(p)$
 > $P_{X}(x)=p^{x}\cdot(1-p)\;\;x \in \mathbb{N}$
-$$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p)=(1-p)\cdot \sum_{i=0}^{+\infty}p^{x}=1 &&\end{flalign}$$
+$$\begin{flalign}\sum_{x=0}^{+\infty}P_{X}(x)=\sum_{x=0}^{+\infty}p^{x}\cdot(1-p)=(1-p)\cdot \sum_{x=0}^{+\infty}p^{x}=1 &&\end{flalign}$$
 
 > [!formule]
 > $$\begin{flalign}\Phi_{X}(t)=\frac{1-p}{1-e^{t}p} &&\end{flalign}$$
@@ -73,6 +73,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 
 > [!esempio]-
 > ![Variabile aleatoria geometrica](Esempi.md#Variabile%20aleatoria%20geometrica)
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria di Poisson
 > [!definizione]
@@ -87,7 +88,6 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 &=\frac{(np)^{y}}{y!}\cdot\left[ 1-np+\frac{n(n-1)}{2!}p^{2}-\frac{n(n-1)(n-2)}{3!}p^{3}+... \right]\\
 &\approx\frac{(np)^{y}}{y!}\cdot\left[ 1-np+\frac{n^{2}}{2!}p^{2}-\frac{n^{3}}{3!}p^{3}+\dots \right]\\
 &=\frac{\mu^{y}}{y!}\left[ 1-\mu+\frac{\mu^{2}}{2!}-\frac{\mu^{3}}{3!}+\dots \right]={\dots} &&\end{flalign}$$
-> <div class="page-break" style="page-break-before: always;"></div>
 > 
 > $Z\sim \mathrm{Pois(\mu)}$, $\mu>0$, $z\in \mathbb{N}$
 > $$\begin{flalign}P_{Z}(z)=\frac{\mu^{z}}{z!}\cdot e^{-\mu} &&\end{flalign}$$
@@ -102,6 +102,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $\mathbb{E}[Z]=\mu=n\cdot p$
 > > [!dimostrazione]-
 > > $$\begin{flalign}{\dots}=\frac{d\Phi_{Z}(t)}{dt}\bigg\rvert_{t=0}=e^{\mu\cdot(e^{t}-1)}\cdot(\mu e^{t})={\dots} &&\end{flalign}$$
+> <div class="page-break" style="page-break-before: always;"></div>
 > 
 > $$\begin{flalign}\mathbb{E}[Z^{2}]=\frac{d^{2}\Phi_{Z}(t)}{dt^{2}}\bigg\rvert_{t=0}=\mu^{2}+\mu &&\end{flalign}$$
 > $\mathrm{Var}[Z]=\mu$
@@ -115,7 +116,6 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 
 > [!esempio]-
 > ![Variabile aleatoria di Poisson](Esempi.md#Variabile%20aleatoria%20di%20Poisson)
-<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria ipergeometrica
 > [!definizione]
@@ -126,6 +126,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $$\begin{flalign}P_{K}(k)=\frac{\binom{D}{k}\binom{N-D}{n-k}}{\binom{N}{n}} &&\end{flalign}$$
 > 
 > Ogni estrazione è una Bernoulliana con $p=\frac{D}{N}$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!approfondimento]-
 > La probabilità di estrarre un pezzo difettoso alla seconda estrazione è
@@ -168,12 +169,12 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 \frac{1}{b-a},&x \in[a,b] \\
 0,&x \notin[a,b]
 \end{cases} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!formule]
 > $$\begin{flalign}\Phi_{X}(t)=\frac{e^{tb}-e^{ta}}{(b-a)\cdot t} &&\end{flalign}$$
 > > [!dimostrazione]-
 > > $$\begin{flalign}{\dots}=\mathbb{E}[e^{tX}]=\int_{a}^{b}e^{tx}\cdot \frac{1}{b-a}\,dx={\dots} &&\end{flalign}$$
-<div class="page-break" style="page-break-before: always;"></div>
 
 > [!approfondimento]-
 > Si può definire una trasformazione
@@ -224,13 +225,13 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > 
 > $$\begin{flalign}\mathbb{E}[X]=\frac{d\Phi_{X}(t)}{dt}\bigg\rvert_{y=0}=\frac{1}{\lambda} &&\end{flalign}$$
 > $$\begin{flalign}\mathrm{Var}[X]=\frac{1}{\lambda^{2}} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!approfondimento]-
 > Vige della proprietà di assenza di memoria, dati $x_{2}>x_{1}$, $x_{2}=x_{1}+x$ ($x>0$)
 > $$\begin{flalign}\mathbb{P}(X>x_{2}|X>x_{1})&=\frac{\mathbb{P}((X>x_{2})\cap(X>x_{1}))}{\mathbb{P}(X>x_{1})}=\frac{\mathbb{P}(X>x_{2})}{\mathbb{P}(X>x_{1})}=\frac{1-F_{X}(x_{2})}{1-F_{X}(x_{1})}\\
 &=\frac{e^{-\lambda(x_{1}+x)}}{e^{-\lambda x_{1}}}=\frac{e^{-\lambda x_{1}}\cdot e^{-\lambda x}}{e^{-\lambda x_{1}}}=e^{-\lambda x}=\mathbb{P}(X>x)
 &&\end{flalign}$$
-<div class="page-break" style="page-break-before: always;"></div>
 
 > [!esempio]-
 > ![Variabile aleatoria esponenziale](Esempi.md#Variabile%20aleatoria%20esponenziale)
@@ -242,6 +243,7 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $Y$ conta il numero di elementi rotti (quindi di guasti), la probabilità che il periodo di funzionamento sia $>x$ è
 > $$\begin{flalign}\mathbb{P}(X>x)=1-F(x)=\sum_{y=0}^{n-1} \frac{(\lambda x)^{y}}{y!}e^{-\lambda x}=\mathbb{P}(Y<n) &&\end{flalign}$$
 > ovvero la probabilità che si verifichino $n-1$ guasti
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!formule]
 > $$\begin{flalign}F_{X_{n}}(x)=\sum_{y=n}^{+\infty} \frac{(\lambda x)^{y}}{y!}\cdot e^{-\lambda x} &&\end{flalign}$$
@@ -259,13 +261,13 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > Se $n\in N$, da prima, $\Gamma(n)=(n-1)!$
 > Se invece $\alpha \in \mathbb{R}$
 > $$\begin{flalign}\Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\cdot e^{-x}\,dx &&\end{flalign}$$
-> <div class="page-break" style="page-break-before: always;"></div>
 > 
 > > [!esempio]-
 > > Alcuni valori noti: $\Gamma(\alpha+1)=\alpha \cdot\Gamma(\alpha)$, $\Gamma(1)=1$, $\Gamma\left( \frac{1}{2} \right)=\sqrt{\pi}$
 
 > [!esempio]-
 > ![Variabile aleatoria gamma](Esempi.md#Variabile%20aleatoria%20gamma)
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria gaussiana
 > [!definizione]
@@ -289,11 +291,11 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > > $$\begin{flalign}1&=\int_{-\infty}^{+\infty}k\cdot e^{-u^{2}/2}\,du=2k\int_{0}^{+\infty}e^{-u^{2}/2}\,du\\
 > > &\;\;\;t=\frac{u^{2}}{2}\;\;\;u=\sqrt{2t}\;\;\;du=\frac{1}{\sqrt{2}}t^{(1/2)-1}\\
 > > &=\frac{2}{\sqrt{2}}k\int_{0}^{+\infty}t^{(1/2)-1}\cdot e^{-t}\,dt=\frac{2}{\sqrt{2}}k\cdot\Gamma\left( \frac{1}{2} \right)=\frac{2\sqrt{\pi}}{\sqrt{2}}k\implies k=\frac{1}{\sqrt{2\pi}}&&\end{flalign}$$
-> <div class="page-break" style="page-break-before: always;"></div>
 > 
 > $X=\mu+\sigma U\sim \mathrm{N}(\mu,\sigma^{2})$ è variabile aleatoria normale (non standard)
 > $$\begin{flalign}f_{X}(x)=\frac{1}{\sqrt{2\pi}}e^{-(1/2)((X-\mu)/\sigma)}\left| \frac{du}{dx}\right|=\frac{1}{\sigma \sqrt{2\pi}}e^{-(1/2)((x-\mu)/\sigma)^{2}} &&\end{flalign}$$
 > con $\sigma>0$
+<div class="page-break" style="page-break-before: always;"></div>
 
 > [!formule]
 > $\Phi_{U}(t)=e^{t^{2}/2}$
@@ -323,10 +325,10 @@ $$\begin{flalign}\sum_{i=0}^{+\infty}P_{X}(x)=\sum_{i=0}^{+\infty}p^{x}\cdot(1-p
 > $\mathrm{Cov}(Y,Z)=\mathbb{E}[(Y-\mathbb{E}[Y])(Z-\mathbb{E}[Z])]=\sum_{i=1}^{n}a_{i}b_{i}\sigma_{i}^{2}$
 > Se $\sigma_{i}=\sigma\;\;\forall i\in \{ 1,\dots,n \}$
 > $\mathrm{Cov}(Y,Z)=0\iff \sum_{i=1}^{n}a_{i}b_{i}=0$, $Y$ e $Z$ sono dette ortogonali
-<div class="page-break" style="page-break-before: always;"></div>
 
 > [!esempio]-
 > ![Variabile aleatoria gaussiana](Esempi.md#Variabile%20aleatoria%20gaussiana)
+<div class="page-break" style="page-break-before: always;"></div>
 
 # Variabile aleatoria normale bivariata
 > [!definizione]
