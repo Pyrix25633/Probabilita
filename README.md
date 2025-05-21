@@ -7,6 +7,7 @@
 - [Variabili aleatorie](Variabili%20aleatorie.md)
 - [Vettori aleatori](Vettori%20aleatori.md)
 - [Modelli](Modelli.md)
+- [Statistica](Statistica.md)
 
 ### PDFs
 - [Notazione](pdf/Notazione.pdf)
@@ -15,3 +16,4 @@
 - [Variabili aleatorie](pdf/Variabili%20aleatorie.pdf)
 - [Vettori aleatori](pdf/Vettori%20aleatori.pdf)
 - [Modelli](pdf/Modelli.pdf)
+- [Statistica](pdf/Statistica.pdf)

@@ -381,4 +381,5 @@ $$\begin{flalign}\sum_{x=0}^{+\infty}P_{X}(x)=\sum_{x=0}^{+\infty}p^{x}\cdot(1-p
 > è una buona approssimazione
 
 > [!approfondimento]- Correzione di continuità
-> Nell'approssimazione di una variabile aleatoria discreta con una continua per $t$ si considera l'intervallo $t-\frac{1}{2}\leq y\leq t+\frac{1}{2}$
+> Nell'approssimazione di una variabile aleatoria discreta $X$ con una continua $Y$ per $x$ si considera l'intervallo $x-\frac{1}{2}\leq y\leq x+\frac{1}{2}$ ovvero $\mathbb{P}(X=x)=\mathbb{P}\left( x-\frac{1}{2}\leq Y\leq x+\frac{1}{2} \right)$
+> 
