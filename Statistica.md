@@ -12,12 +12,14 @@
 > ### Stimatore
 > O statistica, è una misura calcolata su un campione nota ma variabile da campione a campione
 
+---
+
 # Statistica descrittiva
 > [!definizione]
 > Si concentra sull'analisi dei dati osservati con l'obiettivo di sintetizzare le informazioni contenute nei dati di un campione
 > Si possono rappresentare queste informazioni tramite grafici e tabelle
 
-### Variabili
+## Variabili
 > [!definizione]
 > Si distinguono tra:
 > - Numeriche (quantitative):
@@ -25,7 +27,7 @@
 >   - Continue
 > - Categoriche (qualitative)
 
-### Indici di posizione e dispersione
+## Indici di posizione e dispersione
 > [!definizione]
 > ### Media aritmetica
 > Anche chiamata media campionaria
@@ -53,12 +55,12 @@
 > $$\begin{flalign}\sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}} &&\end{flalign}$$
 > 
 
-### Tabelle
+## Tabelle
 > [!definizione]
 > ### Di frequenza
 > Si suddividono i dati in classi e si calcolano la frequenza relativa e cumulativa
 
-### Grafici
+## Grafici
 > [!definizione]
 > ### Istogramma
 > Ogni classe è rappresentata da un rettangolo la cui area è proporzionale alla frequenza
@@ -69,6 +71,63 @@
 > - Box: rappresenta il $50\%$ centrale dei dati compreso tra $Q_{1}$ e $Q_{3}$, una linea all'interno rappresenta la mediana
 > - Outliers: punti al di fuori dei baffi che rappresentano i valori che distano più di $1.5\cdot \mathrm{IQR}$ dalla scatola
 
+---
+
 # Statistica inferenziale
 > [!definizione]
 > Cerca di fare affermazioni riguardanti l'intera popolazione basandosi sulle informazioni ricavate da un campione, espresse in termini di probabilità
+
+## Stimatore
+> [!definizione]
+> Si identifica il campione con una famiglia di variabili aleatorie$X_{1},\dots,X_{n}$ stocasticamente indipendenti con stessa distribuzione le cui CDF/PDF/PMF dipendono da un parametro $\theta$ spesso ignoto, l'obiettivo è determinarlo
+> Una regola che dice come calcolare la stima di $\theta$ o $\psi(\theta)$ dal campione $x_{1},\dots,x_{n}$ è detta stimatore
+> 
+> $T$ funzione delle variabili aleatorie $X_{1},\dots,X_{n}$ è variabile aleatoria, si indica con $T=t(X_{1},\dots X_{n})$ ed è detta statistica o stimatore di $\theta$ o $\psi(\theta)$ se osservato il campione e si utilizza $t(x_{1},\dots,x_{n})$ al posto del parametro
+
+> [!esempio]- Esempi
+> $T_{1}:x_{1}$
+> $T_{2}:x_{1}+{\dots}+x_{n}$
+> $T_{3}: \frac{1}{n}(x_{1},{\dots},x_{n})$
+> $T_{4}:\sqrt[n]{x_{1}\cdot{\dots}\cdot x_{n}}$
+
+## Correttezza
+> [!definizione]
+> Uno stimatore si dice corretto o **non distorto** per $\theta$ o $\psi(\theta)$ se $\mathbb{E}[T]=\theta\;\;\forall\theta$
+
+> [!esempio]- Esempi
+> $\mathbb{E}[T_{1}]=\theta$, corretto
+> $\mathbb{E}[T_{2}]=\mathbb{E}[X_{1}+{\dots}+X_{n}]=\sum_{i=1}^{n}X_{i}=n\theta$, non corretto
+> $\mathbb{E}[T_{3}]=\frac{1}{n}n\theta=\theta$, corretto
+> $\mathbb{E}[T_{4}]\leq\theta$, non corretto
+
+## Consistenza
+> [!definizione]
+> Uno stimatore si dice consistente se $\lim_{ n \to +\infty }\mathrm{Var}[T]=0$ ovvero più grande è il campione più si riduce l'incertezza
+
+> [!esempio]- Esempi
+> $\lim_{ n \to +\infty }\mathrm{Var}[T_{1}]=\mathrm{Var}[X_{1}]$, non consistente
+> $\lim_{ n \to +\infty }\mathrm{Var}[T_{3}]=\lim_{ n \to +\infty }\mathrm{Var}\left[ \frac{1}{n}(X_{1}+{\dots}+X_{n}) \right]=\lim_{ n \to +\infty } \frac{\sigma^{2}}{n}=0$, consistente
+
+## Stimatori per la media
+> [!formule]
+> Per $\theta$:
+> $$\begin{flalign} \frac{1}{n}\sum_{i=1}^{n}x_{i} &&\end{flalign}$$
+> Per $\theta^{-1}$:
+> $$\begin{flalign} \frac{n-1}{\sum_{i=1}^{n}x_{i}} &&\end{flalign}$$
+
+## Stimatori per la varianza
+> [!formule]
+> Se $\mu$ è noto:
+> $$\begin{flalign} \frac{1}{n}\sum_{i=1}^{n}(x_{i}-\mu)^{2} &&\end{flalign}$$
+> > [!dimostrazione]-
+> > $$\begin{flalign}\mathbb{E}[T]&=\mathbb{E}\left[ \frac{1}{n}\sum_{i=1}^{n}(X_{i}-\mu)^{2} \right]=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^{n}(X_{i}^{2}-2X_{i}\mu+\mu^{2}) \right]\\
+> > &=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^{n}X_{i}^{2}-2\mu \sum_{i=1}^{n}X_{i}+n\mu^{2} \right]=\frac{1}{n}\left[ \sum_{i=1}^{n}\mathbb{E}[X_{i}^{2}]-2\mu \sum_{i=1}^{n}\mathbb{E}[X_{i}]+n\mu^{2} \right]\\
+> > &=\frac{1}{n}\left[ \sum_{i=1}^{n}\mathbb{E}[X_{i}^{2}]-2n\mu^{2}+n\mu^{2} \right]=\frac{1}{n}\left[ \sum_{i=1}^{n}(\mathbb{E}[X_{i}^{2}]-\mathbb{E}[X_{i}]^{2}) \right]=\frac{1}{n}n\sigma^{2}=\sigma^{2} &&\end{flalign}$$
+> 
+> Se $\mu$ non è noto:
+> $$\begin{flalign} \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}=\frac{1}{n-1}\left[\sum_{i=1}^{n}x_{i}^{2}-n\bar{x}^{2}\right] &&\end{flalign}$$
+> anche chiamata varianza campionaria
+
+## Intervallo di confidenza
+> [!definizione]
+> Un intervallo di confidenza o **Confidence Interval** di livello $\alpha$ per un parametro $\theta$ o $\psi(\theta)$ è un intervallo $I_{X}:\mathbb{P}(\theta \in I_{X})=\alpha$, dipende dalle osservazioni $X_{1},\dots,X_{n}$ quindi è un'intervallo aleatorio

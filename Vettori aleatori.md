@@ -83,7 +83,7 @@
 
 # Varianza
 > [!definizione]
-> Anche chiamata **Standard Deviation**
+> La cui radice è anche chiamata **Standard Deviation**
 > $$\begin{flalign}\mathrm{Var}[X]&=\mathbb{E}[(X-\mathbb{E}[X])^{2}]=\begin{cases}
 \sum_{i}(x_{i}-\mathbb{E}[X])^{2}P(x_{i}) \\
 \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])^{2}f(x)\,dx
