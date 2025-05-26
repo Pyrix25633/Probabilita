@@ -26,6 +26,7 @@
 >   - Discrete
 >   - Continue
 > - Categoriche (qualitative)
+<div class="page-break" style="page-break-before: always;"></div>
 
 ## Indici di posizione e dispersione
 > [!definizione]
@@ -54,6 +55,7 @@
 > ### Deviazione Standard
 > $$\begin{flalign}\sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}} &&\end{flalign}$$
 > 
+<div class="page-break" style="page-break-before: always;"></div>
 
 ## Tabelle
 > [!definizione]
@@ -67,9 +69,13 @@
 > 
 > ### Box and whiskers plot
 > Fornisce una rappresentazione visiva della distribuzione dei dati, permette di confrontare la distribuzione dei dati tra diversi gruppi o categorie e di identificare simmetrie o asimmetrie
-> - Baffi: linee verticali che si estendono dal box fino al massimo e minimo escludendo gli outliers
-> - Box: rappresenta il $50\%$ centrale dei dati compreso tra $Q_{1}$ e $Q_{3}$, una linea all'interno rappresenta la mediana
+> - Whiskers o baffi: linee verticali che si estendono dal box fino al massimo e minimo escludendo gli outliers
+> - Box o scatola: rappresenta il $50\%$ centrale dei dati compreso tra $Q_{1}$ e $Q_{3}$, una linea all'interno rappresenta la mediana
 > - Outliers: punti al di fuori dei baffi che rappresentano i valori che distano più di $1.5\cdot \mathrm{IQR}$ dalla scatola
+
+> [!esempio]-
+> ![Tabella di frequenza, istogramma e box plot](Esempi.md#Tabella%20di%20frequenza,%20istogramma%20e%20box%20plot)
+<div class="page-break" style="page-break-before: always;"></div>
 
 ---
 
@@ -99,6 +105,7 @@
 > $\mathbb{E}[T_{2}]=\mathbb{E}[X_{1}+{\dots}+X_{n}]=\sum_{i=1}^{n}X_{i}=n\theta$, non corretto
 > $\mathbb{E}[T_{3}]=\frac{1}{n}n\theta=\theta$, corretto
 > $\mathbb{E}[T_{4}]\leq\theta$, non corretto
+<div class="page-break" style="page-break-before: always;"></div>
 
 ## Consistenza
 > [!definizione]
@@ -114,6 +121,7 @@
 > $$\begin{flalign} \frac{1}{n}\sum_{i=1}^{n}x_{i} &&\end{flalign}$$
 > Per $\theta^{-1}$:
 > $$\begin{flalign} \frac{n-1}{\sum_{i=1}^{n}x_{i}} &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
 
 ## Stimatori per la varianza
 > [!formule]

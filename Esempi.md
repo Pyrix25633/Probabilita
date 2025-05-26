@@ -195,3 +195,41 @@ La probabilità che l'auto riesca a percorrere $250$ chilometri è $\mathbb{P}(X
 $X\sim \mathrm{N}(0.45,0.05^{2})$ conta i litri erogati da un distributore automatico con media $0.45$ e deviazione $0.05$
 $U\sim \mathrm{N}(0,1)$ normale standard dalla quale si ottengono i valori tabulati
 La probabilità che siano erogati più di $0.5$ litri è $\mathbb{P}(X>0.5)=1-\mathbb{P}(U\leq1)\approx0.1587$
+
+# Tabella di frequenza, istogramma e box plot
+Dati ordinati:
+$67.8,68.2,69.3,70.5,72.1,73.4,75.5,75.0,76.4,77.9,79.0,$$80.6,81.5,82.3,83.7,85.6,86.4,88.7,90.1,91.2,105.8$
+
+$Q_{0}=x_{\mathrm{min}}=67.8$
+$Q_{1}=72.1\cdot0.25+73.4\cdot0.75=73.075$
+$Q_{2}=79.0$
+$Q_{3}=85.6\cdot0.75+86.4\cdot0.25=85.8$
+$Q_{4}=x_{\mathrm{max}}=105.8$
+$\bar{x}=\frac{1}{21}\sum_{i=1}^{21}x_{i}=80$
+$\mathrm{Range}=38$
+$\mathrm{IQR}=12.725$
+Outliers: $x\not\in[Q_{1}-1.5\cdot \mathrm{IQR},Q_{3}+1.5\cdot \mathrm{IQR}]=[53.9875,104.8875]$
+<div class="page-break" style="page-break-before: always;"></div>
+
+Suddivisione in classi di larghezza $3$
+
+| Classe      | Frequenza assoluta | Frequenza relativa | Frequenza cumulativa |
+| ----------- | ------------------ | ------------------ | -------------------- |
+| $[67,70)$   | $3$                | $\frac{3}{21}$     | $\frac{3}{21}$       |
+| $[70,73)$   | $2$                | $\frac{2}{21}$     | $\frac{5}{21}$       |
+| $[73,76)$   | $3$                | $\frac{3}{21}$     | $\frac{8}{21}$       |
+| $[76,79)$   | $2$                | $\frac{2}{21}$     | $\frac{10}{21}$      |
+| $[79,82)$   | $3$                | $\frac{3}{21}$     | $\frac{13}{21}$      |
+| $[82,85)$   | $2$                | $\frac{2}{21}$     | $\frac{15}{21}$      |
+| $[85,88)$   | $2$                | $\frac{2}{21}$     | $\frac{17}{21}$      |
+| $[88,91)$   | $2$                | $\frac{2}{21}$     | $\frac{19}{21}$      |
+| $[91,94)$   | $1$                | $\frac{1}{21}$     | $\frac{20}{21}$      |
+| $[94,97)$   | $0$                | $0$                | $\frac{20}{21}$      |
+| $[97,100)$  | $0$                | $0$                | $\frac{20}{21}$      |
+| $[100,103)$ | $0$                | $0$                | $\frac{20}{21}$      |
+| $[103,106)$ | $1$                | $\frac{1}{21}$     | $1$                  |
+Istogramma:
+![istogramma](istogramma.png)
+
+Box plot:
+![box_plot](box_plot.png)
