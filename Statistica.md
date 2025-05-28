@@ -53,7 +53,7 @@
 > $\mathrm{IQR}=Q_{3}-Q_{1}$
 > 
 > ### Deviazione Standard
-> $$\begin{flalign}\sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}} &&\end{flalign}$$
+> $$\begin{flalign}s=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}} &&\end{flalign}$$
 > 
 <div class="page-break" style="page-break-before: always;"></div>
 
@@ -117,25 +117,49 @@
 
 ## Stimatori per la media
 > [!formule]
-> Per $\theta$:
-> $$\begin{flalign} \frac{1}{n}\sum_{i=1}^{n}x_{i} &&\end{flalign}$$
-> Per $\theta^{-1}$:
-> $$\begin{flalign} \frac{n-1}{\sum_{i=1}^{n}x_{i}} &&\end{flalign}$$
+> $$\begin{flalign} \bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_{i} &&\end{flalign}$$
+> $$\begin{flalign} \frac{1}{\bar{x}}= \frac{n-1}{\sum_{i=1}^{n}x_{i}} &&\end{flalign}$$
 <div class="page-break" style="page-break-before: always;"></div>
 
 ## Stimatori per la varianza
 > [!formule]
 > Se $\mu$ è noto:
-> $$\begin{flalign} \frac{1}{n}\sum_{i=1}^{n}(x_{i}-\mu)^{2} &&\end{flalign}$$
+> $$\begin{flalign} \sigma^{2}=\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\mu)^{2} &&\end{flalign}$$
 > > [!dimostrazione]-
 > > $$\begin{flalign}\mathbb{E}[T]&=\mathbb{E}\left[ \frac{1}{n}\sum_{i=1}^{n}(X_{i}-\mu)^{2} \right]=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^{n}(X_{i}^{2}-2X_{i}\mu+\mu^{2}) \right]\\
 > > &=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^{n}X_{i}^{2}-2\mu \sum_{i=1}^{n}X_{i}+n\mu^{2} \right]=\frac{1}{n}\left[ \sum_{i=1}^{n}\mathbb{E}[X_{i}^{2}]-2\mu \sum_{i=1}^{n}\mathbb{E}[X_{i}]+n\mu^{2} \right]\\
 > > &=\frac{1}{n}\left[ \sum_{i=1}^{n}\mathbb{E}[X_{i}^{2}]-2n\mu^{2}+n\mu^{2} \right]=\frac{1}{n}\left[ \sum_{i=1}^{n}(\mathbb{E}[X_{i}^{2}]-\mathbb{E}[X_{i}]^{2}) \right]=\frac{1}{n}n\sigma^{2}=\sigma^{2} &&\end{flalign}$$
 > 
 > Se $\mu$ non è noto:
-> $$\begin{flalign} \frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}=\frac{1}{n-1}\left[\sum_{i=1}^{n}x_{i}^{2}-n\bar{x}^{2}\right] &&\end{flalign}$$
+> $$\begin{flalign} s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}=\frac{1}{n-1}\left[\sum_{i=1}^{n}x_{i}^{2}-n\bar{x}^{2}\right] &&\end{flalign}$$
 > anche chiamata varianza campionaria
 
 ## Intervallo di confidenza
 > [!definizione]
-> Un intervallo di confidenza o **Confidence Interval** di livello $\alpha$ per un parametro $\theta$ o $\psi(\theta)$ è un intervallo $I_{X}:\mathbb{P}(\theta \in I_{X})=\alpha$, dipende dalle osservazioni $X_{1},\dots,X_{n}$ quindi è un'intervallo aleatorio
+> Un intervallo di confidenza o **Confidence Interval** di livello $\alpha \in(0,1)$ per un parametro $\theta$ o $\psi(\theta)$ è un intervallo $I_{X}:\mathbb{P}(\theta \in I_{X})=\alpha$, dipende dalle osservazioni $X_{1},\dots,X_{n}$ quindi è un'intervallo aleatorio
+
+> [!formule]
+> ### Intervallo di confidenza per la media se $\sigma$ è nota
+> $$\begin{flalign}\Phi_{\frac{\alpha+1}{2}}=F_{U}^{-1}\left( \frac{\alpha+1}{2} \right) &&\end{flalign}$$
+> $$\begin{flalign}\mu \in\left( \bar{x}-\Phi_{\frac{\alpha+1}{2}}\cdot \frac{\sigma}{\sqrt{n}},\bar{x}+\Phi_{\frac{\alpha+1}{2}}\cdot \frac{\sigma}{\sqrt{n}} \right) &&\end{flalign}$$
+<div class="page-break" style="page-break-before: always;"></div>
+
+> [!definizione]
+> Intervallo di confidenza di una proporzione
+> $X_{i}\sim \mathrm{B}(p)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$ ($i,j=1,\dots,n$)
+> Se $n\cdot p>5$ e $n\cdot p\cdot(1-p)>5$ si può utilizzare l'approssimazione gaussiana e stimare $p$ con $\bar{x}$ considerando $\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_{i}\sim \mathrm{N}\left( p, \frac{p\cdot(1-p)}{n} \right)$
+
+> [!formule]
+> ### Intervallo di confidenza di una proporzione
+> $$\begin{flalign}p \in\left( \bar{x}-\Phi_{\frac{\alpha+1}{2}}\cdot \sqrt{\frac{\bar{x}\cdot(1-\bar{x})}{n}}, \bar{x}+\Phi_{\frac{\alpha+1}{2}}\cdot \sqrt{\frac{\bar{x}\cdot(1-\bar{x})}{n}} \right) &&\end{flalign}$$
+
+> [!definizione]
+> $X_{i}\sim \mathrm{N}(0,1)$, $X_{i}\perp \!\!\! \perp X_{j}\;\;i\neq j$, ($i,j=1,\dots,n$)
+> $Y=\sum_{i=1}^{n}\sim \chi^{2}(n)$
+> $Z\sim \mathrm{N}(0,1)$, $Z\perp \!\!\! \perp Y$
+> $$\begin{flalign}T=\frac{Z}{\sqrt{\frac{Y}{n}}} &&\end{flalign}$$
+> è detta T di Student con $n$ gradi di libertà
+
+> [!formule]
+> ### Stimatore per la media se $\sigma$ non è nota
+> $$\begin{flalign}\mu \in\left( \bar{x}-t_{\frac{\alpha+1}{2}(n-1)}\cdot \frac{s}{\sqrt{n}},\bar{x}+t_{\frac{\alpha+1}{2}(n-1)}\cdot \frac{s}{\sqrt{n}} \right) &&\end{flalign}$$
