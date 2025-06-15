@@ -120,7 +120,7 @@
 > > $$\begin{flalign}\mathrm{Cov}(X,Y)=\left( \int_{-\infty}^{+\infty} (x-\mathbb{E}[X])f_{X}(x)\,dx \right)\left( \int_{-\infty}^{+\infty} (y-\mathbb{E}[Y])f_{Y}(y)\,dy \right) &&\end{flalign}$$
 > > $$\begin{flalign}\int_{-\infty}^{+\infty} xf_{X}(x)\,dx-\int_{-\infty}^{+\infty} \mathbb{E}[X]f_{X}(x)\,dx=\mathbb{E}[X]-\mathbb{E}[X]\cdot1=0 &&\end{flalign}$$
 > > Analogamente per $y$
-> > $\implies \mathrm{Cov}(X,Y)=0\cdot0\implies\dots$> 
+> > $\implies \mathrm{Cov}(X,Y)=0\cdot0\implies\dots$
 > 
 
 # Correlazione
