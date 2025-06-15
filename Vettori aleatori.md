@@ -168,7 +168,7 @@
 > $$\begin{flalign}\mathbb{E}[X^{n}]=\frac{d^{n}\Phi_{X}(t)}{dt^{n}}\bigg\rvert_{t=0}=\Phi_{X}^{(n)}(0) &&\end{flalign}$$
 > > [!dimostrazione]-
 > > Utilizzando lo sviluppo di Taylor
-> > $\Phi_{X}(t)=\mathbb{E}\left[ 1+tX+\frac{tX^{2}}{2!}+\dots \right]=1+t\mathbb{E}[X]+\frac{t^{2}}{2!}E[X^{2}]+\dots$
+> > $\Phi_{X}(t)=\mathbb{E}\left[ 1+tX+\frac{t^{2}X^{2}}{2!}+\dots \right]=1+t\mathbb{E}[X]+\frac{t^{2}}{2!}E[X^{2}]+\dots$
 > 
 > $$\begin{flalign}\mathbb{E}[e^{tX}]=\begin{cases}
 \sum_{i}e^{tx_{i}}P(x_{i}) \\
