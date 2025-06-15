@@ -175,6 +175,8 @@
 \int_{-\infty}^{+\infty}e^{tx}f(x) \,dx
 \end{cases} &&\end{flalign}$$
 > Se converge esiste la funzione generatrice dei momenti, questa fissa tutti i momenti di $X$ e la determina univocamente
+> 
+> Se due variabili aleatorie hanno la stessa funzione generatrice di momenti allora seguono la stessa distribuzione
 
 > [!formule]
 > $X_{1},X_{2}$ variabili aleatorie, $Y=X_{1}+X_{2}$
